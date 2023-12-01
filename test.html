@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="test.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="tabs-container">
+        <button class="tablink" onclick="openTab('Home',this,'red')" style="background-color: red;">Home</button>
+        <button class="tablink" onclick="openTab('News',this,'green')">News</button>
+        <button class="tablink" onclick="openTab('Contact',this,'blue')">Contact</button>
+        <button class="tablink" onclick="openTab('About',this,'orange')">About</button>
+      </div>
+      
+      <div id="Home" class="tabcontent" style="display: block;">
+        <h3>Home</h3>
+        <p>This is the home tab content.</p>
+      </div>
+      
+      <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>This is the news tab content.</p>
+      </div>
+      
+      <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>This is the contact tab content.</p>
+      </div>
+      
+      <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>This is the about tab content.</p>
+      </div>
+    </div>
+    <script src="test.js"></script>
+  </body>
+
+</html>

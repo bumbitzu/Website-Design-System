@@ -1,0 +1,49 @@
+.wrapper{
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  border: 1px solid black;
+  border-bottom: 10px solid #FB4848 ;
+  border-top: 40px solid #FB4848 ;
+  border-left: 10px solid #FB4848 ;
+  border-right: 10px solid #FB4848 ;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Create a flex container to manage tab layout */
+.tabs-container {
+  display: flex;
+  flex:1;
+  height: 100%;
+}
+
+/* Style tab links */
+.tablink {
+  flex: 1;
+  background-color: #555;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+/* Set the background color for each tab */
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}

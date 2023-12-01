@@ -1,0 +1,25 @@
+.code h3{
+  position: relative;
+  top:30px;
+  left:20px;
+  color: white;
+}
+
+
+.code-wrapper{
+  border-bottom: 10px solid rgb(27, 27, 27) ;
+  border-top: 20px solid rgb(27, 27, 27) ;
+  border-left: 10px solid rgb(27, 27, 27) ;
+  border-right: 10px solid rgb(27, 27, 27) ;
+  
+}
+.code{
+  background-color: rgb(27, 27, 27) ;
+  border-radius: 10px;
+  max-width: 90%;
+  display: block;
+  margin: 20px;
+  
+
+
+}
