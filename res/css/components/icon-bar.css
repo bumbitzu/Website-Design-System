@@ -1,13 +1,3 @@
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  border-bottom: 10px solid #FB4848 ;
-  border-top: 40px solid #FB4848 ;
-  border-left: 10px solid #FB4848 ;
-  border-right: 10px solid #FB4848 ;
-  border-radius: 10px;
-  padding: 15px;
-}
 .icon-bar-v {
   width: 90px; /* Set a specific width */
   background-color: #969696; /*background */
