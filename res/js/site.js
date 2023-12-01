@@ -37,7 +37,7 @@ function closeSide()
 }
 window.addEventListener('resize', function ()
 {
-  if (window.innerWidth >= 933)
+  if (window.innerWidth > 933)
   {
     mySidebar.style.display = 'block';
     for (let i = 0; i < myNavbtn.length; i++)
