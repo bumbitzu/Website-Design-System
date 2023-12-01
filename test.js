@@ -1,14 +1,8 @@
-function openTab(tabName, element, color)
-{
-  let i, tabcontent;
+// Șirul original
+var sirOriginal = "./res/html/menus/pile-navigation.html";
 
-  tabcontent = document.getElementsByClassName("tabcontent");
-  tab = document.getElementsByClassName('tablink')
-  for (i = 0; i < tabcontent.length; i++)
-  {
-    tabcontent[ i ].style.display = "none";
-    tab[ i ].style.backgroundColor = '#555'
-  }
-  document.getElementById(tabName).style.display = "block";
-  element.style.backgroundColor = color;
-}
+// Modificăm ultimele 5 caractere
+var sirModificat = sirOriginal.slice(0, -5) + "-code.html";
+
+// Afișăm rezultatul
+console.log(sirModificat);

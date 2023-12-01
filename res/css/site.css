@@ -158,16 +158,16 @@ body{
 /*main*/
 main{
   margin-left:200px; 
-  margin-top:32px
+  margin-top:50px
 }
 section{
   padding-top: 32px;
-  padding-bottom: 23px;
   float: left;
   width: 90%;
   margin: 1% 5%;
 
 }
+
 .section-container{
   padding: 0.01em 16px;
   width: 90%;

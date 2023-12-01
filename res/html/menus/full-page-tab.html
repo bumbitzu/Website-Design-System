@@ -34,7 +34,6 @@
   <body style="overflow-y: hidden;">
     <!--Content-->
 
-    <div class="wrapper">
       <div class="tabs-container">
         <button class="tablink" onclick="openTab('Home',this,'red')" style="background-color: red;">Home</button>
         <button class="tablink" onclick="openTab('News',this,'green')">News</button>
@@ -61,122 +60,7 @@
         <h3>About</h3>
         <p>This is the about tab content.</p>
       </div>
-    </div>
 
-    <div class="code">
-      <h3>HTML</h3>
-      <div class="code-wrapper">
-        <pre>
-      <code class="language-html">
-&lt;div class="wrapper"&gt;
-  &lt;div class="tabs-container"&gt;
-    &lt;button class="tablink" onclick="openTab('Home',this,'red')" style="background-color: red;"&gt;Home&lt;/button&gt;
-    &lt;button class="tablink" onclick="openTab('News',this,'green')"&gt;News&lt;/button&gt;
-    &lt;button class="tablink" onclick="openTab('Contact',this,'blue')"&gt;Contact&lt;/button&gt;
-    &lt;button class="tablink" onclick="openTab('About',this,'orange')"&gt;About&lt;/button&gt;
-  &lt;/div&gt;
-  
-  &lt;div id="Home" class="tabcontent" style="display: block;"&gt;
-    &lt;h3&gt;Home&lt;/h3&gt;
-    &lt;p&gt;This is the home tab content.&lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div id="News" class="tabcontent"&gt;
-    &lt;h3&gt;News&lt;/h3&gt;
-    &lt;p&gt;This is the news tab content.&lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div id="Contact" class="tabcontent"&gt;
-    &lt;h3&gt;Contact&lt;/h3&gt;
-    &lt;p&gt;This is the contact tab content.&lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div id="About" class="tabcontent"&gt;
-    &lt;h3&gt;About&lt;/h3&gt;
-    &lt;p&gt;This is the about tab content.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      </code>
-    </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>CSS</h3>
-      <div class="code-wrapper">
-        <pre>
-<code class="language-css">
-  .wrapper{
-    display: flex;
-    /*height:100vh;*/
-    flex-direction: column;
-    border: 1px solid black;
-    border-bottom: 10px solid #FB4848 ;
-    border-top: 40px solid #FB4848 ;
-    border-left: 10px solid #FB4848 ;
-    border-right: 10px solid #FB4848 ;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  
-  /* Create a flex container to manage tab layout */
-  .tabs-container {
-    display: flex;
-    flex:1;
-    height: 100%;
-  }
-  
-  /* Style tab links */
-  .tablink {
-    flex: 1;
-    background-color: #555;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-  }
-  /* Style the tab content (and add height:100% for full page content) */
-  .tabcontent {
-    color: white;
-    display: none;
-    padding: 100px 20px;
-    height: 100%;
-  }
-  
-  /* Set the background color for each tab */
-  #Home {background-color: red;}
-  #News {background-color: green;}
-  #Contact {background-color: blue;}
-  #About {background-color: orange;}
-  
-</code>
-    </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>JS</h3>
-      <div class="code-wrapper">
-        <pre>
-      <code class="language-css">
-function openTab(tabName, element,color)
-{
-  let i, tabcontent;
-  
-  tabcontent = document.getElementsByClassName("tabcontent");
-  tab = document.getElementsByClassName('tablink')
-  for (i = 0; i &lt; tabcontent.length; i++)
-  {
-    tabcontent[ i ].style.display = "none";
-    tab[i].style.backgroundColor ='#555'
-  }
-  document.getElementById(tabName).style.display = "block";
-  element.style.backgroundColor = color;
-}
-      </code>
-    </pre>
-      </div>
-    </div>
     <!--Content-->
     <script src="../../js/components/full-page-tab.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"

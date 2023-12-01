@@ -27,8 +27,15 @@
       }
     </style>
     <style>
-      /* Stilurile tale aici */
-      #iframe {
+      #iframe1 {
+        border: solid #525252;
+        border-top: 40px solid #525252;
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+      #iframe2 {
+        margin-bottom: 100px;
         transition: opacity 0.5s ease-in-out;
         /* Adaugă tranziția de fade */
       }
@@ -92,8 +99,8 @@
         onclick="changeColor('search-menu'); changeIframe('./res/html/menus/search-menu.html')">Search Menu</a>
       <a class="side-button" href="#" id="search-bar"
         onclick="changeColor('search-bar'); changeIframe('./res/html/menus/search-bar.html')">Search Bar</a>
-      <a class="side-button" href="#" id="fixed-slidebar"
-        onclick="changeColor('fixed-slidebar'); changeIframe('./res/html/menus/fixed-slidebar.html')">Fixed Slidebar</a>
+      <a class="side-button" href="#" id="fixed-sidebar"
+        onclick="changeColor('fixed-sidebar'); changeIframe('./res/html/menus/fixed-sidebar.html')">Fixed Sidebar</a>
       <a class="side-button" href="#" id="side-navigation"
         onclick="changeColor('side-navigation'); changeIframe('./res/html/menus/side-navigation.html')">Side Navigation</a>
       <a class="side-button" href="#" id="responsive-sidebar"
@@ -176,9 +183,14 @@
     </nav>
     <main>
 
-      <section id="section">
+      <section id="section1">
         <div class="section-container" id="section-container">
-          <iframe id="iframe" src="" style="width: 100%; height: 3000px;" frameborder="0"></iframe>
+          <iframe id="iframe1" src="" style="width: 100%;" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section-container" id="section-container2">
+          <iframe id="iframe2" src="" style="width: 100%;" frameborder="0"></iframe>
         </div>
       </section>
 

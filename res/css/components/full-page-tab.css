@@ -1,16 +1,3 @@
-.wrapper{
-  display: flex;
-  /*height:100vh;*/
-  flex-direction: column;
-  border: 1px solid black;
-  border-bottom: 10px solid #FB4848 ;
-  border-top: 40px solid #FB4848 ;
-  border-left: 10px solid #FB4848 ;
-  border-right: 10px solid #FB4848 ;
-  border-radius: 10px;
-  padding: 15px;
-}
-
 /* Create a flex container to manage tab layout */
 .tabs-container {
   display: flex;
