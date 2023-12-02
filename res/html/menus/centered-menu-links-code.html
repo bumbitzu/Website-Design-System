@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+&lt;div class="topnav"&gt;
+
+  &lt;!-- Centered link --&gt;
+  &lt;div class="topnav-centered"&gt;
+    &lt;a href="#home" class="active"&gt;Home&lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Left-aligned links (default) --&gt;
+  &lt;a href="#news"&gt;News&lt;/a&gt;
+  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  
+  &lt;!-- Right-aligned links --&gt;
+  &lt;div class="topnav-right"&gt;
+    &lt;a href="#search"&gt;Search&lt;/a&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;div style="padding-left:16px"&gt;
+  &lt;h2&gt;Responsive&lt;/h2&gt;
+  &lt;p&gt;Resize the browser window to see the responsive effect.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
+
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  .topnav {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .topnav-right {
+    float: right;
+  }
+  
+  /* Responsive navigation menu (for mobile devices) */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+    
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
