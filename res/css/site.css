@@ -86,7 +86,7 @@ body{
 .side-bar{
   display: block;
   z-index: 2;
-  width: 200px;
+  width: 300px;
   top:43px;
   bottom: 0;
   height: inherit;
@@ -135,7 +135,7 @@ body{
 }
 /*main*/
 main{
-  margin-left:200px; 
+  margin-left:300px; 
   margin-top:50px
 }
 section{
@@ -148,7 +148,7 @@ section{
 
 .section-container{
   padding: 0.01em 16px;
-  width: 90%;
+  width: 100%;
   float: left;
   box-sizing: inherit;
 }
