@@ -1,15 +1,11 @@
 .wrapper{
   display: flex;
-  border-bottom: 10px solid #FB4848 ;
-  border-top: 40px solid #FB4848 ;
-  border-left: 10px solid #FB4848 ;
-  border-right: 10px solid #FB4848 ;
-  border-radius: 10px;
-  padding: 15px;
+  height: 100%;
 }
 .vertical-tabs {
   display: flex;
   flex-direction: column;
+
   width: 200px;
   background-color: #333;
   color: #fff;
