@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+&lt;div id="mySidepanel" class="sidepanel"&gt;
+  &lt;a href="javascript:void(0)" class="closebtn" onclick="closeNav()"&gt;×&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Services&lt;/a&gt;
+  &lt;a href="#"&gt;Clients&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;button class="openbtn" onclick="openNav()"&gt;☰ Toggle Sidepanel&lt;/button&gt;
+&lt;h2&gt;Lorem ipsum&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt&lt;/p&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
+
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color:#444;
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+
+  <!--JS-------------------------------->
+  <div class="code">
+    <h3>JS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  function openNav()
+  {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  function closeNav()
+  {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--JS-------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
