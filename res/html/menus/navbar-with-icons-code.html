@@ -31,32 +31,80 @@
   </head>
 
   <body>
+
     <div class="code">
       <h3>HTML</h3>
       <div class="code-wrapper">
         <pre>
-          <code class="language-html">
-<!--Html-->
+      <code class="language-html">
+&lt;!-- Load an icon library --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
 
-<!--Html-->
-          </code>
-        </pre>
+  &lt;div class="navbar"&gt;
+    &lt;a class="active" href="#"&gt;&lt;i class="fa fa-fw fa-home"&gt;&lt;/i&gt; Home&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fa fa-fw fa-search"&gt;&lt;/i&gt; Search&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fa fa-fw fa-envelope"&gt;&lt;/i&gt; Contact&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fa fa-fw fa-user"&gt;&lt;/i&gt; Login&lt;/a&gt;
+  &lt;/div&gt;
+      </code>
+    </pre>
       </div>
     </div>
     <div class="code">
       <h3>CSS</h3>
       <div class="code-wrapper">
         <pre>
-          <code class="language-css">
-<!--Css-->
+      <code class="language-css">
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-bottom: 10px solid #FB4848 ;
+  border-top: 40px solid #FB4848 ;
+  border-left: 10px solid #FB4848 ;
+  border-right: 10px solid #FB4848 ;
+  border-radius: 10px;
+  padding: 15px;
+}
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
 
-<!--Css-->
-          </code>
-        </pre>
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #FB4848;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+      </code>
+    </pre>
       </div>
     </div>
     <!--Content-->
-    <script src=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
       integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>

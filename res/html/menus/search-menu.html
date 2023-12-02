@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/components/search-menu.css">
-    <link rel="stylesheet" href="../../css/code.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
       integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
@@ -26,7 +25,7 @@
 
       body {
         margin: 0;
-        padding: 0;
+        padding: 1;
       }
     </style>
   </head>
@@ -34,7 +33,7 @@
   <body>
     <!--Content-->
 
-    <div class="wrapper">
+
       <div class="row">
         <div class="left" style="background-color:#bbb;">
           <h2>Menu</h2>
@@ -60,123 +59,16 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </div>
-    </div>
 
-    <div class="code">
-      <h3>HTML</h3>
-      <div class="code-wrapper">
-        <pre>
-          <code class="language-html">
-&lt;div class="wrapper"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="left" style="background-color:#bbb;"&gt;
-      &lt;h2&gt;Menu&lt;/h2&gt;
-      &lt;input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category"&gt;
-      &lt;ul id="myMenu"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;PHP&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Python&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;jQuery&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;SQL&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Node.js&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    
-    &lt;div class="right" style="background-color:#ddd;"&gt;
-      &lt;h2&gt;Page Content&lt;/h2&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-          </code>
-        </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>CSS</h3>
-      <div class="code-wrapper">
-        <pre>
-<code class="language-css">
-  .wrapper{
-    display: flex;
-    border: 1px solid black;
-    border-bottom: 10px solid #FB4848 ;
-    border-top: 40px solid #FB4848 ;
-    border-left: 10px solid #FB4848 ;
-    border-right: 10px solid #FB4848 ;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  
-  /* Create a column layout with Flexbox */
-  .row {
-    display: flex;
-  }
-  
-  /* Left column (menu) */
-  .left {
-    flex: 35%;
-    padding: 15px 0;
-  }
-  
-  .left h2 {
-    padding-left: 8px;
-  }
-  
-  /* Right column (page content) */
-  .right {
-    flex: 65%;
-    padding: 15px;
-  }
-  
-  /* Style the search box */
-  #mySearch {
-    width: 100%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #ddd;
-  }
-  
-  /* Style the navigation menu inside the left column */
-  #myMenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #myMenu li a {
-    padding: 12px;
-    text-decoration: none;
-    color: black;
-    display: block
-  }
-  
-  #myMenu li a:hover {
-    background-color: #eee;
-  }
-</code>
-        </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>JS</h3>
-      <div class="code-wrapper">
-        <pre>
-          <code class="language-css">
-function myFunction()
+    <script>
+      function myFunction()
 {
   var input, filter, ul, li, a, i;
   input = document.getElementById("mySearch");
   filter = input.value.toUpperCase();
   ul = document.getElementById("myMenu");
   li = ul.getElementsByTagName("li");
-  for (i = 0; i &lt; li.length; i++)
+  for (i = 0; i < li.length; i++)
   {
     a = li[ i ].getElementsByTagName("a")[ 0 ];
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1)
@@ -188,12 +80,7 @@ function myFunction()
     }
   }
 }
-          </code>
-        </pre>
-      </div>
-    </div>
-    <!--Content-->
-    <script src="../../js/components/search-menu.js"></script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
       integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>

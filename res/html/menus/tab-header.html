@@ -4,13 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../css/components/tab-header.css">
-    <link rel="stylesheet" href="../../css/code.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
-      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <style>
       html,
@@ -26,12 +21,11 @@
 
       body {
         margin: 0;
-        padding: 0;
+        padding: 1;
       }
     </style>
   </head>
   <body>
-    <div class="wrapper">
       <div id="Tab1" class="tabcontent">
         <h1>Tab 1</h1>
         <p>Content for tab 1</p>
@@ -57,135 +51,27 @@
         <li class="tab" onclick="openTab('Tab3', this)" style="--active-color: blue;">Tab 3</li>
         <li class="tab" onclick="openTab('Tab4', this)" style="--active-color: orange;">Tab 4</li>
       </ul>
-    </div>
-    <div class="code">
-      <h3>HTML</h3>
-      <div class="code-wrapper">
-        <pre>
-      <code class="language-html">
-&lt;div class="wrapper"&gt;
-  &lt;div id="Tab1" class="tabcontent"&gt;
-    &lt;h1&gt;Tab 1&lt;/h1&gt;
-    &lt;p&gt;Content for tab 1&lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div id="Tab2" class="tabcontent"&gt;
-    &lt;h1&gt;Tab 2&lt;/h1&gt;
-    &lt;p&gt;Content for tab 2&lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div id="Tab3" class="tabcontent"&gt;
-    &lt;h1&gt;Tab 3&lt;/h1&gt;
-    &lt;p&gt;Content for tab 3&lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div id="Tab4" class="tabcontent"&gt;
-    &lt;h1&gt;Tab 4&lt;/h1&gt;
-    &lt;p&gt;Content for tab 4&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;ul class="tabs"&gt;
-    &lt;li class="tab" onclick="openTab('Tab1', this)" style="--active-color: red;"&gt;Tab 1&lt;/li&gt;
-    &lt;li class="tab" onclick="openTab('Tab2', this)" style="--active-color: green;"&gt;Tab 2&lt;/li&gt;
-    &lt;li class="tab" onclick="openTab('Tab3', this)" style="--active-color: blue;"&gt;Tab 3&lt;/li&gt;
-    &lt;li class="tab" onclick="openTab('Tab4', this)" style="--active-color: orange;"&gt;Tab 4&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-      </code>
-    </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>CSS</h3>
-      <div class="code-wrapper">
-        <pre>
-<code class="language-css">
-  .wrapper{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-bottom: 10px solid #FB4848 ;
-    border-top: 40px solid #FB4848 ;
-    border-left: 10px solid #FB4848 ;
-    border-right: 10px solid #FB4848 ;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  .tabs {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .tab {
-    flex: 1;
-    text-align: center;
-    padding: 15px;
-    background-color: #555;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .tab:hover {
-    background-color: #777;
-  }
-  
-  .tabcontent {
-    display: none;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  #Tab1 { background-color: red; }
-  #Tab2 { background-color: green; }
-  #Tab3 { background-color: blue; }
-  #Tab4 { background-color: orange; }
-  
-  .active {
-    background-color: var(--active-color);
-  }
-</code>
-    </pre>
-      </div>
-    </div>
-    <div class="code">
-      <h3>JS</h3>
-      <div class="code-wrapper">
-        <pre>
-<code class="language-css">
-  function openTab(tabName, elmnt)
-  {
-    var i, tabcontent, tabs;
-  
-    // Hide all tab contents by default
-    tabcontent = document.querySelectorAll('.tabcontent');
-    tabcontent.forEach(tab => tab.style.display = 'none');
-  
-    // Remove the active class from all tabs
-    tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-  
-    // Show the specific tab content
-    document.getElementById(tabName).style.display = 'block';
-  
-    // Add the active class to the clicked tab
-    elmnt.classList.add('active');
-  }
-  
-  // Get the first tab and click on it by default
-  document.querySelector('.tab').click();
-</code>
-    </pre>
-      </div>
-    </div>
-    <!--Content-->
-    <script src="../../js/components/tab-header.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
-      integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
-      integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>function openTab(tabName, elmnt)
+      {
+        var i, tabcontent, tabs;
+      
+        // Hide all tab contents by default
+        tabcontent = document.querySelectorAll('.tabcontent');
+        tabcontent.forEach(tab => tab.style.display = 'none');
+      
+        // Remove the active class from all tabs
+        tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
+      
+        // Show the specific tab content
+        document.getElementById(tabName).style.display = 'block';
+      
+        // Add the active class to the clicked tab
+        elmnt.classList.add('active');
+      }
+      
+      // Get the first tab and click on it by default
+      document.querySelector('.tab').click();</script>
   </body>
 
 </html>
