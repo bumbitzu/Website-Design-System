@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/components/menus/dropdown-in-sidenav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 1px;
+        height: 400px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--CONTENT-->
+    <div class="sidenav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+      <button class="dropdown-btn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+      <a href="#contact">Search</a>
+    </div>
+
+    <div class="main">
+      <h2>Sidebar Dropdown</h2>
+      <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+      <p>This sidebar is of full height (100%) and always shown.</p>
+      <p>Some random text..</p>
+    </div>
+    <!--CONTENT-->
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing 
+      its dropdown content - This allows the user to have multiple dropdowns without 
+      any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++)
+      {
+        dropdown[ i ].addEventListener("click", function ()
+        {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block")
+          {
+            dropdownContent.style.display = "none";
+          } else
+          {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+
+</html>

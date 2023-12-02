@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+&lt;div class="sidenav"&gt;
+  &lt;a href="#about"&gt;About&lt;/a&gt;
+  &lt;a href="#services"&gt;Services&lt;/a&gt;
+  &lt;a href="#clients"&gt;Clients&lt;/a&gt;
+  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;button class="dropdown-btn"&gt;Dropdown
+    &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-container"&gt;
+    &lt;a href="#"&gt;Link 1&lt;/a&gt;
+    &lt;a href="#"&gt;Link 2&lt;/a&gt;
+    &lt;a href="#"&gt;Link 3&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;a href="#contact"&gt;Search&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="main"&gt;
+  &lt;h2&gt;Sidebar Dropdown&lt;/h2&gt;
+  &lt;p&gt;Click on the dropdown button to open the dropdown menu inside the side navigation.&lt;/p&gt;
+  &lt;p&gt;This sidebar is of full height (100%) and always shown.&lt;/p&gt;
+  &lt;p&gt;Some random text..&lt;/p&gt;
+&lt;/div&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
+
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  /* Fixed sidenav, full height */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+
+  <!--JS-------------------------------->
+  <div class="code">
+    <h3>JS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  /* Loop through all dropdown buttons to toggle between hiding and showing 
+  its dropdown content - This allows the user to have multiple dropdowns without 
+  any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i &lt; dropdown.length; i++)
+  {
+    dropdown[ i ].addEventListener("click", function ()
+    {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block")
+      {
+        dropdownContent.style.display = "none";
+      } else
+      {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--JS-------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
