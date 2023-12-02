@@ -107,17 +107,4 @@ function init(link,buttonId)
 {
   changeColor(buttonId)
   changeIframe(link);
-
 }
-
-function initInfo()
-{
-  let info = document.getElementById('info');
-  info.style.display = 'flex';
-}
-function closeInfo()
-{
-  let info = document.getElementById('info');
-  info.style.display = 'none';
-}
-

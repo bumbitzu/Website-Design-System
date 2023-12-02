@@ -21,28 +21,6 @@ body{
   text-align: center;
   
 }
-.info{
-  top:-10px;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  display: none;
-  z-index: 10;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffffff00;
-  color: white;
-}
-.info-wrapper button{
-  margin: 20px;
-  padding: 15px;
-  width: 70px;
-  border-radius: 10px;
-  background-color: #FB4848;
-  color: white;
-  font-size: 20px;
-}
 /*nav-bar*/
 .nav-bar{
   top:0;
