@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/components/menus/slide-down-bar-on-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 1px;
+        height: 400px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--CONTENT-->
+    <div id="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div style="padding: 50px;">
+      <h1>Scroll down this frame to see the effect!</h1>
+      <h2>Scroll to the top to hide the navbar.</h2>
+      <h1>Mihai Eminescu</h1>
+      <h3>Luceafărul</h3>
+      
+      <p>
+        A fost odată ca-n poveşti,<br/>
+        A fost ca niciodată.<br/>
+        Din rude mari împărăteşti,<br/>
+        O prea frumoasă fată.<br/>
+        <br/>
+        Şi era una la părinţi<br/>
+        Şi mândră-n toate cele,<br/>
+        Cum e Fecioara între sfinţi<br/>
+        Şi luna între stele.<br/>
+        <br/>
+        Din umbra falnicelor bolţi<br/>
+        Ea pasul şi-l îndreaptă<br/>
+        Lângă fereastră, unde-n colţ<br/>
+        Luceafărul aşteaptă.<br/>
+        <br/>
+        Privea în zare cum pe mări<br/>
+        Răsare şi străluce,<br/>
+        Pe mişcătoarele cărări<br/>
+        Corăbii negre duce.<br/>
+        <br/>
+        Îl vede azi, îl vede mâini,<br/>
+        Astfel dorinţa-i gata;<br/>
+        El iar, privind de săptămâni,<br/>
+        Îi cade draga fată.<br/>
+        <br/>
+        Cum ea pe coate-şi răzima<br/>
+        Visând ale ei tâmple,<br/>
+        De dorul lui şi inima<br/>
+        Şi sufletu-i se împle.<br/>
+        
+        Şi cât de viu s-aprinde el<br/>
+        În orişicare sară,<br/>
+        Spre umbra negrului castel<br/>
+        Când ea o să-i apară.<br/>
+        <br/>
+        ...<br/>
+        <br/>
+        Şi pas cu pas pe urma ei<br/>
+        Alunecă-n odaie,<br/>
+        Ţesând cu recile-i scântei<br/>
+        O mreajă de văpaie.<br/>
+        <br/>
+        Şi când în pat se-ntinde drept<br/>
+        Copila să se culce,<br/>
+        I-atinge mâinile pe piept,<br/>
+        I-nchide geana dulce;<br/>
+        <br/>
+        Şi din oglindă luminiş<br/>
+        Pe trupu-i se revarsă,<br/>
+        Pe ochii mari, bătând închişi<br/>
+        Pe faţa ei întoarsă.<br/>
+      </p>
+    </div>
+    <!--CONTENT-->
+    <script>
+      // When the user scrolls down 20px from the top of the document, slide down the navbar
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction()
+      {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+        {
+          document.getElementById("navbar").style.top = "0";
+        } else
+        {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+      }
+    </script>
+  </body>
+
+</html>
