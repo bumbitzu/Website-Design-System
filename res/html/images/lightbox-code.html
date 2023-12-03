@@ -1,39 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
 
-  <head>
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+  &lt;h2 style="text-align:center"&gt;Lightbox&lt;/h2&gt;
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+  &lt;div class="row"&gt;
+    &lt;div class="column"&gt;
+      &lt;img src="../../img/a_new_day.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+      &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+      <img src="../../img/alps_meadow_germany.jpg" style="width:100%" onclick="openModal();currentSlide(3)"
+        class="hover-shadow cursor">
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+      &lt;img src="../../img/amazing.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+  &lt;div id="myModal" class="modal"&gt;
+    &lt;span class="close cursor" onclick="closeModal()"&gt;&times;&lt;/span&gt;
+    &lt;div class="modal-content"&gt;
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+      &lt;div class="mySlides"&gt;
+        &lt;div class="numbertext"&gt;1 / 4&lt;/div&gt;
+        &lt;img src="../../img/a_new_day.jpg" style="width:100%"&gt;
+      &lt;/div&gt;
 
-    </script>
-  </body>
+      &lt;div class="mySlides"&gt;
+        &lt;div class="numbertext"&gt;2 / 4&lt;/div&gt;
+        &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%"&gt;
+      &lt;/div&gt;
 
+      &lt;div class="mySlides"&gt;
+        &lt;div class="numbertext"&gt;3 / 4&lt;/div&gt;
+        &lt;img src="../../img/alps_meadow_germany.jpg" style="width:100%"&gt;
+      &lt;/div&gt;
+
+      &lt;div class="mySlides"&gt;
+        &lt;div class="numbertext"&gt;4 / 4&lt;/div&gt;
+        &lt;img src="../../img/amazing.jpg" style="width:100%"&gt;
+      &lt;/div&gt;
+
+      &lt;a class="prev" onclick="plusSlides(-1)"&gt;&#10094;&lt;/a&gt;
+      &lt;a class="next" onclick="plusSlides(1)"&gt;&#10095;&lt;/a&gt;
+
+      &lt;div class="caption-container"&gt;
+        &lt;p id="caption"&gt;&lt;/p&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class="column"&gt;
+        &lt;img class="demo cursor" src="../../img/a_new_day.jpg" style="width:100%" onclick="currentSlide(1)"
+          alt="Caption 1"&gt;
+      &lt;/div&gt;
+      &lt;div class="column"&gt;
+        &lt;img class="demo cursor" src="../../img/aerial_view_of_rainbow.jpg" style="width:100%" onclick="currentSlide(2)" alt="Caption 2"&gt;
+      &lt;/div&gt;
+      &lt;div class="column"&gt;
+        &lt;img class="demo cursor" src="../../img/alps_meadow_germany.jpg" style="width:100%" onclick="currentSlide(3)"
+          alt="Caption 3"&gt;
+      &lt;/div&gt;
+      &lt;div class="column"&gt;
+        &lt;img class="demo cursor" src="../../img/amazing.jpg" style="width:100%" onclick="currentSlide(4)"
+          alt="Caption 4"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
+
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  .row{
+    display: flex;
+  }
+   .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+
+  <!--JS-------------------------------->
+  <div class="code">
+    <h3>JS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  function openModal()
+  {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal()
+  {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n)
+  {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n)
+  {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n)
+  {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n &lt; 1) { slideIndex = slides.length }
+    for (i = 0; i &lt; slides.length; i++)
+    {
+      slides[ i ].style.display = "none";
+    }
+    for (i = 0; i &lt; dots.length; i++)
+    {
+      dots[ i ].className = dots[ i ].className.replace(" active", "");
+    }
+    slides[ slideIndex - 1 ].style.display = "block";
+    dots[ slideIndex - 1 ].className += " active";
+    captionText.innerHTML = dots[ slideIndex - 1 ].alt;
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--JS-------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
 </html>
