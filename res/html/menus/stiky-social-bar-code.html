@@ -29,7 +29,25 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;div class="icon-bar"&gt;
+  &lt;a href="#" class="facebook"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt; 
+  &lt;a href="#" class="twitter"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt; 
+  &lt;a href="#" class="google"&gt;&lt;i class="fa fa-google"&gt;&lt;/i&gt;&lt;/a&gt; 
+  &lt;a href="#" class="linkedin"&gt;&lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a href="#" class="youtube"&gt;&lt;i class="fa fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt; 
+&lt;/div&gt;
+
+&lt;div class="content"&gt;
+  &lt;h3&gt;Sticky Social Bar&lt;/h3&gt;
+  &lt;p&gt;The sticky social bar will stick to the screen when you scroll.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+&lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +60,61 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
