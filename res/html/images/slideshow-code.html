@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+&lt;div class="slideshow-container"&gt;
+
+  &lt;div class="mySlides fade"&gt;
+    &lt;div class="numbertext"&gt;1 / 3&lt;/div&gt;
+    &lt;img src="../../img/amazing_sunset.jpg" style="width:100%"&gt;
+    &lt;div class="text"&gt;Caption Text&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mySlides fade"&gt;
+    &lt;div class="numbertext"&gt;2 / 3&lt;/div&gt;
+    &lt;img src="../../img/a_new_day.jpg" style="width:100%"&gt;
+    &lt;div class="text"&gt;Caption Two&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mySlides fade"&gt;
+    &lt;div class="numbertext"&gt;3 / 3&lt;/div&gt;
+    &lt;img src="../../img/beach_sunrise.jpg" style="width:100%"&gt;
+    &lt;div class="text"&gt;Caption Three&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;a class="prev" onclick="plusSlides(-1)"&gt;❮&lt;/a&gt;
+  &lt;a class="next" onclick="plusSlides(1)"&gt;❯&lt;/a&gt;
+
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;div style="text-align:center"&gt;
+  &lt;span class="dot" onclick="currentSlide(1)"&gt;&lt;/span&gt;
+  &lt;span class="dot" onclick="currentSlide(2)"&gt;&lt;/span&gt;
+  &lt;span class="dot" onclick="currentSlide(3)"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
+
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  .mySlides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+
+  <!--JS-------------------------------->
+  <div class="code">
+    <h3>JS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n)
+{
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n)
+{
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n)
+{
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n &LT; 1) { slideIndex = slides.length }
+  for (i = 0; i &LT; slides.length; i++)
+  {
+    slides[ i ].style.display = "none";
+  }
+  for (i = 0; i &LT; dots.length; i++)
+  {
+    dots[ i ].className = dots[ i ].className.replace(" active", "");
+  }
+  slides[ slideIndex - 1 ].style.display = "block";
+  dots[ slideIndex - 1 ].className += " active";
+}
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--JS-------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Images</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <style>
+      #iframe1 {
+        border: solid #525252;
+        border-top: 40px solid #525252;
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+      #iframe2 {
+        margin-bottom: 100px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+    </style>
+  </head>
+
+  <body onload="init('./html/images/slideshow.html','slideshow'); initInfo()">
+    <!-- Navbar -->
+    <div class="nav-bar" id="nav-bar">
+      <div class="nav-content">
+        <a class="nav-small-display" href="javascript:void(0)" onclick="navBtn()"><i class="fa fa-compass"></i></a>
+        <a class="menu-small-display" href="javascript:void(1)" onclick="openSide()"><i class="fa fa-bars"></i></a>
+        <a href="menus.html" class="nav-button" >Menus</a>
+        <a href="#" class="nav-button" style="background-color:white; color:black">Images</a>
+        <a href="buttons.html" class="nav-button">Butons</a>
+        <a href="forms.html" class="nav-button">Forms</a>
+        <a href="filters.html" class="nav-button">Filters</a>
+        <a href="tables.html" class="nav-button">Tables</a>
+        <a href="more.html" class="nav-button">More</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="side-bar" id="side-bar">
+      <a href="javascript:void(0)" onclick="closeSide()" class="close-sidebar" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Images</b></h4>
+      <a class="side-button" href="#" id="slideshow"
+        onclick="changeColor('slideshow'); changeIframe('./html/images/slideshow.html')">Slideshow</a>
+    </nav>
+    <main>
+
+      <section id="section1">
+        <div class="section-container" id="section-container">
+          <iframe id="iframe1" src="" style="width: 100%; max-height: 460px;" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section-container" id="section-container2">
+          <iframe id="iframe2" src="" style="width: 100%;" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <p>Powered by <a href="https://github.com/bumbitzu" target="_blank">Bumbitzu</a></p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </main>
+    <script src="./js/site.js"></script>
+  </body>
+
+</html>
