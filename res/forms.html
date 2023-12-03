@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Forms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <style>
+      #iframe1 {
+        border: solid #525252;
+        border-top: 40px solid #525252;
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+      #iframe2 {
+        margin-bottom: 100px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+    </style>
+  </head>
+
+  <body onload="init('./html/forms/login-form.html','login-form');">
+    <!-- Navbar -->
+    <div class="nav-bar" id="nav-bar">
+      <div class="nav-content">
+        <a class="nav-small-display" href="javascript:void(0)" onclick="navBtn()"><i class="fa fa-compass"></i></a>
+        <a class="menu-small-display" href="javascript:void(1)" onclick="openSide()"><i class="fa fa-bars"></i></a>
+        <a href="menus.html" class="nav-button">Menus</a>
+        <a href="images.html" class="nav-button">Images</a>
+        <a href="buttons.html" class="nav-button" >Butons</a>
+        <a href="#" class="nav-button" style="background-color:white; color:black">Forms</a>
+        <a href="filters.html" class="nav-button">Filters</a>
+        <a href="tables.html" class="nav-button">Tables</a>
+        <a href="more.html" class="nav-button">More</a>
+      </div>
+    </div>
+&lt;
+    <!-- Sidebar -->
+    <nav class="side-bar" id="side-bar">
+      <a href="javascript:void(0)" onclick="closeSide()" class="close-sidebar" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="bar-item"><b>Forms</b></h4>
+      <a class="side-button" href="#" id="login-form"onclick="changeColor('login-form'); changeIframe('./html/images/login-form.html')">Login Form</a>
+      <a class="side-button" href="#" id="signup-form"onclick="changeColor('signup-form'); changeIframe('./html/images/signup-form.html')">Signup Form</a>
+      <a class="side-button" href="#" id="checkout-form"onclick="changeColor('checkout-form'); changeIframe('./html/images/checkout-form.html')">Checkout Form</a>
+      <a class="side-button" href="#" id="contact-form"onclick="changeColor('contact-form'); changeIframe('./html/images/contact-form.html')">Contact Form</a>
+      <a class="side-button" href="#" id="social-login-form"onclick="changeColor('social-login-form'); changeIframe('./html/images/social-login-form.html')">Social Login Form</a>
+      <a class="side-button" href="#" id="register-form"onclick="changeColor('register-form'); changeIframe('./html/images/register-form.html')">Register Form</a>
+      <a class="side-button" href="#" id="form-with-icons"onclick="changeColor('form-with-icons'); changeIframe('./html/images/form-with-icons.html')">Form With Icons</a>
+      <a class="side-button" href="#" id="newsletter"onclick="changeColor('newsletter'); changeIframe('./html/images/newsletter.html')">Newsletter</a>
+      <a class="side-button" href="#" id="stacked-form"onclick="changeColor('stacked-form'); changeIframe('./html/images/stacked-form.html')">Stacked Form</a>
+      <a class="side-button" href="#" id="responsive-form"onclick="changeColor('responsive-form'); changeIframe('./html/images/responsive-form.html')">Responsive Form</a>
+      <a class="side-button" href="#" id="popup-form"onclick="changeColor('popup-form'); changeIframe('./html/images/popup-form.html')">Popup Form</a>
+      <a class="side-button" href="#" id="inline-form"onclick="changeColor('inline-form'); changeIframe('./html/images/inline-form.html')">Inline Form</a>
+      <a class="side-button" href="#" id="clear-input-field"onclick="changeColor('clear-input-field'); changeIframe('./html/images/clear-input-field.html')">Clear Input Field</a>
+      <a class="side-button" href="#" id="hide-number-arrows"onclick="changeColor('hide-number-arrows'); changeIframe('./html/images/hide-number-arrows.html')">Hide Number Arrows</a>
+      <a class="side-button" href="#" id="copy-text-to-clipboard"onclick="changeColor('copy-text-to-clipboard'); changeIframe('./html/images/copy-text-to-clipboard.html')">Copy Text To Clipboard</a>
+      <a class="side-button" href="#" id="animated-search"onclick="changeColor('animated-search'); changeIframe('./html/images/animated-search.html')">Animated Search</a>
+      <a class="side-button" href="#" id="search-button"onclick="changeColor('search-button'); changeIframe('./html/images/search-button.html')">Search Button</a>
+      <a class="side-button" href="#" id="fullscreen-search"onclick="changeColor('fullscreen-search'); changeIframe('./html/images/fullscreen-search.html')">Fullscreen Search</a>
+      <a class="side-button" href="#" id="input-field-navbar"onclick="changeColor('input-field-navbar'); changeIframe('./html/images/input-field-navbar.html')">Input Field Navbar</a>
+      <a class="side-button" href="#" id="login-form-navbar"onclick="changeColor('login-form-navbar'); changeIframe('./html/images/login-form-navbar.html')">Login Form Navbar</a>
+      <a class="side-button" href="#" id="custom-checkbox"onclick="changeColor('custom-checkbox'); changeIframe('./html/images/custom-checkbox.html')">Custom Checkbox</a>
+      <a class="side-button" href="#" id="custom-select"onclick="changeColor('custom-select'); changeIframe('./html/images/custom-select.html')">Custom Select</a>
+      <a class="side-button" href="#" id="toggle-switch"onclick="changeColor('toggle-switch'); changeIframe('./html/images/toggle-switch.html')">Toggle Switch</a>
+      <a class="side-button" href="#" id="check-checkbox"onclick="changeColor('check-checkbox'); changeIframe('./html/images/check-checkbox.html')">Check Checkbox</a>
+      <a class="side-button" href="#" id="detects-caps-lock"onclick="changeColor('detects-caps-lock'); changeIframe('./html/images/detects-caps-lock.html')">Detects Caps Lock</a>
+      <a class="side-button" href="#" id="trigger-button-on-enter"onclick="changeColor('trigger-button-on-enter'); changeIframe('./html/images/trigger-button-on-enter.html')">Trigger Button On Enter</a>
+      <a class="side-button" href="#" id="password-validation"onclick="changeColor('password-validation'); changeIframe('./html/images/password-validation.html')">Password Validation</a>
+      <a class="side-button" href="#" id="toggle-password-visibility"onclick="changeColor('toggle-password-visibility'); changeIframe('./html/images/toggle-password-visibility.html')">Toggle Password Visibility</a>
+      <a class="side-button" href="#" id="multiple-step-form"onclick="changeColor('multiple-step-form'); changeIframe('./html/images/multiple-step-form.html')">Multiple Step Form</a>
+      <a class="side-button" href="#" id="autocomplete"onclick="changeColor('autocomplete'); changeIframe('./html/images/autocomplete.html')">Autocomplete</a>
+      <a class="side-button" href="#" id="turn-off-autocomplete"onclick="changeColor('turn-off-autocomplete'); changeIframe('./html/images/turn-off-autocomplete.html')">Turn Off Autocomplete</a>
+      <a class="side-button" href="#" id="turn-off-spellcheck"onclick="changeColor('turn-off-spellcheck'); changeIframe('./html/images/turn-off-spellcheck.html')">Turn Off Spellcheck</a>
+      <a class="side-button" href="#" id="file-upload-button"onclick="changeColor('file-upload-button'); changeIframe('./html/images/file-upload-button.html')">File Upload Button</a>
+      <a class="side-button" href="#" id="empty-input-validation"onclick="changeColor('empty-input-validation'); changeIframe('./html/images/empty-input-validation.html')">Empty Input Validation</a>
+    </nav>
+    <main>
+
+      <section id="section1">
+        <div class="section-container" id="section-container">
+          <iframe id="iframe1" src="" style="width: 100%; max-height: 460px;" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section-container" id="section-container2">
+          <iframe id="iframe2" src="" style="width: 100%;" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <p>Powered by <a href="https://github.com/bumbitzu" target="_blank">Bumbitzu</a></p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </main>
+    <script src="./js/site.js"></script>
+  </body>
+
+</html>

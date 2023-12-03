@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>More</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <style>
+      #iframe1 {
+        border: solid #525252;
+        border-top: 40px solid #525252;
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+      #iframe2 {
+        margin-bottom: 100px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+    </style>
+  </head>
+
+  <body onload="init('./html/more/fullscreen-video.html','filter-list');">
+    <!-- Navbar -->
+    <div class="nav-bar" id="nav-bar">
+      <div class="nav-content">
+        <a class="nav-small-display" href="javascript:void(0)" onclick="navBtn()"><i class="fa fa-compass"></i></a>
+        <a class="menu-small-display" href="javascript:void(1)" onclick="openSide()"><i class="fa fa-bars"></i></a>
+        <a href="menus.html" class="nav-button">Menus</a>
+        <a href="images.html" class="nav-button">Images</a>
+        <a href="buttons.html" class="nav-button" >Butons</a>
+        <a href="forms.html" class="nav-button" >Forms</a>
+        <a href="filters.html" class="nav-button" >Filters</a>
+        <a href="tables.html"class="nav-button" >Tables</a>
+        <a href="#" class="nav-button" style="background-color:white; color:black">More</a>
+      </div>
+    </div>
+&lt;
+    <!-- Sidebar -->
+    <nav class="side-bar" id="side-bar">
+      <a href="javascript:void(0)" onclick="closeSide()" class="close-sidebar" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="bar-item"><b>More</b></h4>
+      <a class="side-button" href="#" id="fullscreen-video"onclick="changeColor('fullscreen-video'); changeIframe('./html/images/fullscreen-video.html')">Fullscreen Video</a>
+      <a class="side-button" href="#" id="modal-boxes"onclick="changeColor('modal-boxes'); changeIframe('./html/images/modal-boxes.html')">Modal Boxes</a>
+      <a class="side-button" href="#" id="delete-modal"onclick="changeColor('delete-modal'); changeIframe('./html/images/delete-modal.html')">Delete Modal</a>
+      <a class="side-button" href="#" id="timeline"onclick="changeColor('timeline'); changeIframe('./html/images/timeline.html')">Timeline</a>
+      <a class="side-button" href="#" id="scroll-indicator"onclick="changeColor('scroll-indicator'); changeIframe('./html/images/scroll-indicator.html')">Scroll Indicator</a>
+      <a class="side-button" href="#" id="progress-bar"onclick="changeColor('progress-bar'); changeIframe('./html/images/progress-bar.html')">Progress Bar</a>
+      <a class="side-button" href="#" id="skill-bar"onclick="changeColor('skill-bar'); changeIframe('./html/images/skill-bar.html')">Skill Bar</a>
+      <a class="side-button" href="#" id="range-sliders"onclick="changeColor('range-sliders'); changeIframe('./html/images/range-sliders.html')">Range Sliders</a>
+      <a class="side-button" href="#" id="color-picker"onclick="changeColor('color-picker'); changeIframe('./html/images/color-picker.html')">Color Picker</a>
+      <a class="side-button" href="#" id="email-field"onclick="changeColor('email-field'); changeIframe('./html/images/email-field.html')">Email Field</a>
+      <a class="side-button" href="#" id="tooltip"onclick="changeColor('tooltip'); changeIframe('./html/images/tooltip.html')">Tooltip</a>
+      <a class="side-button" href="#" id="display-element-hover"onclick="changeColor('display-element-hover'); changeIframe('./html/images/display-element-hover.html')">Display Element Hover</a>
+      <a class="side-button" href="#" id="popup"onclick="changeColor('popup'); changeIframe('./html/images/popup.html')">Popup</a>
+      <a class="side-button" href="#" id="collapsible"onclick="changeColor('collapsible'); changeIframe('./html/images/collapsible.html')">Collapsible</a>
+      <a class="side-button" href="#" id="calendar"onclick="changeColor('calendar'); changeIframe('./html/images/calendar.html')">Calendar</a>
+      <a class="side-button" href="#" id="html-includes"onclick="changeColor('html-includes'); changeIframe('./html/images/html-includes.html')">Html Includes</a>
+      <a class="side-button" href="#" id="to-do-list"onclick="changeColor('to-do-list'); changeIframe('./html/images/to-do-list.html')">To Do List</a>
+      <a class="side-button" href="#" id="loaders"onclick="changeColor('loaders'); changeIframe('./html/images/loaders.html')">Loaders</a>
+      <a class="side-button" href="#" id="badges"onclick="changeColor('badges'); changeIframe('./html/images/badges.html')">Badges</a>
+      <a class="side-button" href="#" id="star-rating"onclick="changeColor('star-rating'); changeIframe('./html/images/star-rating.html')">Star Rating</a>
+      <a class="side-button" href="#" id="user-rating"onclick="changeColor('user-rating'); changeIframe('./html/images/user-rating.html')">User Rating</a>
+      <a class="side-button" href="#" id="overlay-effect"onclick="changeColor('overlay-effect'); changeIframe('./html/images/overlay-effect.html')">Overlay Effect</a>
+      <a class="side-button" href="#" id="contact-chips"onclick="changeColor('contact-chips'); changeIframe('./html/images/contact-chips.html')">Contact Chips</a>
+      <a class="side-button" href="#" id="cards"onclick="changeColor('cards'); changeIframe('./html/images/cards.html')">Cards</a>
+      <a class="side-button" href="#" id="flip-card"onclick="changeColor('flip-card'); changeIframe('./html/images/flip-card.html')">Flip Card</a>
+      <a class="side-button" href="#" id="profile-card"onclick="changeColor('profile-card'); changeIframe('./html/images/profile-card.html')">Profile Card</a>
+      <a class="side-button" href="#" id="product-card"onclick="changeColor('product-card'); changeIframe('./html/images/product-card.html')">Product Card</a>
+      <a class="side-button" href="#" id="alerts"onclick="changeColor('alerts'); changeIframe('./html/images/alerts.html')">Alerts</a>
+      <a class="side-button" href="#" id="callout"onclick="changeColor('callout'); changeIframe('./html/images/callout.html')">Callout</a>
+      <a class="side-button" href="#" id="notes"onclick="changeColor('notes'); changeIframe('./html/images/notes.html')">Notes</a>
+      <a class="side-button" href="#" id="labels"onclick="changeColor('labels'); changeIframe('./html/images/labels.html')">Labels</a>
+      <a class="side-button" href="#" id="ribbon"onclick="changeColor('ribbon'); changeIframe('./html/images/ribbon.html')">Ribbon</a>
+      <a class="side-button" href="#" id="tag-cloud"onclick="changeColor('tag-cloud'); changeIframe('./html/images/tag-cloud.html')">Tag Cloud</a>
+      <a class="side-button" href="#" id="circles"onclick="changeColor('circles'); changeIframe('./html/images/circles.html')">Circles</a>
+      <a class="side-button" href="#" id="styke-hr"onclick="changeColor('styke-hr'); changeIframe('./html/images/styke-hr.html')">Styke Hr</a>
+      <a class="side-button" href="#" id="coupon"onclick="changeColor('coupon'); changeIframe('./html/images/coupon.html')">Coupon</a>
+      <a class="side-button" href="#" id="list-group"onclick="changeColor('list-group'); changeIframe('./html/images/list-group.html')">List Group</a>
+      <a class="side-button" href="#" id="list-group-with-badges"onclick="changeColor('list-group-with-badges'); changeIframe('./html/images/list-group-with-badges.html')">List Group With Badges</a>
+      <a class="side-button" href="#" id="list-without-bullets"onclick="changeColor('list-without-bullets'); changeIframe('./html/images/list-without-bullets.html')">List Without Bullets</a>
+      <a class="side-button" href="#" id="responsive-text"onclick="changeColor('responsive-text'); changeIframe('./html/images/responsive-text.html')">Responsive Text</a>
+      <a class="side-button" href="#" id="cutout-text"onclick="changeColor('cutout-text'); changeIframe('./html/images/cutout-text.html')">Cutout Text</a>
+      <a class="side-button" href="#" id="glowing-text"onclick="changeColor('glowing-text'); changeIframe('./html/images/glowing-text.html')">Glowing Text</a>
+      <a class="side-button" href="#" id="fixed-footer"onclick="changeColor('fixed-footer'); changeIframe('./html/images/fixed-footer.html')">Fixed Footer</a>
+      <a class="side-button" href="#" id="sticky-element"onclick="changeColor('sticky-element'); changeIframe('./html/images/sticky-element.html')">Sticky Element</a>
+      <a class="side-button" href="#" id="equal-height"onclick="changeColor('equal-height'); changeIframe('./html/images/equal-height.html')">Equal Height</a>
+      <a class="side-button" href="#" id="clearfix"onclick="changeColor('clearfix'); changeIframe('./html/images/clearfix.html')">Clearfix</a>
+      <a class="side-button" href="#" id="responsive-floats"onclick="changeColor('responsive-floats'); changeIframe('./html/images/responsive-floats.html')">Responsive Floats</a>
+      <a class="side-button" href="#" id="snakbar"onclick="changeColor('snakbar'); changeIframe('./html/images/snakbar.html')">Snakbar</a>
+      <a class="side-button" href="#" id="fullscreen-window"onclick="changeColor('fullscreen-window'); changeIframe('./html/images/fullscreen-window.html')">Fullscreen Window</a>
+      <a class="side-button" href="#" id="scroll-drawing"onclick="changeColor('scroll-drawing'); changeIframe('./html/images/scroll-drawing.html')">Scroll Drawing</a>
+      <a class="side-button" href="#" id="smooth-scroll"onclick="changeColor('smooth-scroll'); changeIframe('./html/images/smooth-scroll.html')">Smooth Scroll</a>
+      <a class="side-button" href="#" id="gradient-background-scroll"onclick="changeColor('gradient-background-scroll'); changeIframe('./html/images/gradient-background-scroll.html')">Gradient Background Scroll</a>
+      <a class="side-button" href="#" id="stiky-header"onclick="changeColor('stiky-header'); changeIframe('./html/images/stiky-header.html')">Stiky Header</a>
+      <a class="side-button" href="#" id="shrink-header-on-scroll"onclick="changeColor('shrink-header-on-scroll'); changeIframe('./html/images/shrink-header-on-scroll.html')">Shrink Header On Scroll</a>
+      <a class="side-button" href="#" id="pricing-table"onclick="changeColor('pricing-table'); changeIframe('./html/images/pricing-table.html')">Pricing Table</a>
+      <a class="side-button" href="#" id="parallax"onclick="changeColor('parallax'); changeIframe('./html/images/parallax.html')">Parallax</a>
+      <a class="side-button" href="#" id="aspect-ratio"onclick="changeColor('aspect-ratio'); changeIframe('./html/images/aspect-ratio.html')">Aspect Ratio</a>
+      <a class="side-button" href="#" id="responsive-iframes"onclick="changeColor('responsive-iframes'); changeIframe('./html/images/responsive-iframes.html')">Responsive Iframes</a>
+      <a class="side-button" href="#" id="toggle-like"onclick="changeColor('toggle-like'); changeIframe('./html/images/toggle-like.html')">Toggle Like</a>
+      <a class="side-button" href="#" id="toggle-hide"onclick="changeColor('toggle-hide'); changeIframe('./html/images/toggle-hide.html')">Toggle Hide</a>
+      <a class="side-button" href="#" id="toggle-dark-mode"onclick="changeColor('toggle-dark-mode'); changeIframe('./html/images/toggle-dark-mode.html')">Toggle Dark Mode</a>
+      <a class="side-button" href="#" id="toggle-text"onclick="changeColor('toggle-text'); changeIframe('./html/images/toggle-text.html')">Toggle Text</a>
+      <a class="side-button" href="#" id="toggle-class"onclick="changeColor('toggle-class'); changeIframe('./html/images/toggle-class.html')">Toggle Class</a>
+      <a class="side-button" href="#" id="add-class"onclick="changeColor('add-class'); changeIframe('./html/images/add-class.html')">Add Class</a>
+      <a class="side-button" href="#" id="remove-class"onclick="changeColor('remove-class'); changeIframe('./html/images/remove-class.html')">Remove Class</a>
+      <a class="side-button" href="#" id="change-class"onclick="changeColor('change-class'); changeIframe('./html/images/change-class.html')">Change Class</a>
+      <a class="side-button" href="#" id="active-class"onclick="changeColor('active-class'); changeIframe('./html/images/active-class.html')">Active Class</a>
+      <a class="side-button" href="#" id="tree-view"onclick="changeColor('tree-view'); changeIframe('./html/images/tree-view.html')">Tree View</a>
+      <a class="side-button" href="#" id="remove-decimals"onclick="changeColor('remove-decimals'); changeIframe('./html/images/remove-decimals.html')">Remove Decimals</a>
+      <a class="side-button" href="#" id="remove-property"onclick="changeColor('remove-property'); changeIframe('./html/images/remove-property.html')">Remove Property</a>
+      <a class="side-button" href="#" id="ofline-detection"onclick="changeColor('ofline-detection'); changeIframe('./html/images/ofline-detection.html')">Ofline Detection</a>
+      <a class="side-button" href="#" id="find-hidden-element"onclick="changeColor('find-hidden-element'); changeIframe('./html/images/find-hidden-element.html')">Find Hidden Element</a>
+      <a class="side-button" href="#" id="redirect-webpage"onclick="changeColor('redirect-webpage'); changeIframe('./html/images/redirect-webpage.html')">Redirect Webpage</a>
+      <a class="side-button" href="#" id="format-number"onclick="changeColor('format-number'); changeIframe('./html/images/format-number.html')">Format Number</a>
+      <a class="side-button" href="#" id="zoom-hover"onclick="changeColor('zoom-hover'); changeIframe('./html/images/zoom-hover.html')">Zoom Hover</a>
+      <a class="side-button" href="#" id="flip-box"onclick="changeColor('flip-box'); changeIframe('./html/images/flip-box.html')">Flip Box</a>
+      <a class="side-button" href="#" id="center-vericaly"onclick="changeColor('center-vericaly'); changeIframe('./html/images/center-vericaly.html')">Center Vericaly</a>
+      <a class="side-button" href="#" id="venter-button-on-div"onclick="changeColor('venter-button-on-div'); changeIframe('./html/images/venter-button-on-div.html')">Venter Button On Div</a>
+      <a class="side-button" href="#" id="center-a-list"onclick="changeColor('center-a-list'); changeIframe('./html/images/center-a-list.html')">Center A List</a>
+      <a class="side-button" href="#" id="transition-on-hover"onclick="changeColor('transition-on-hover'); changeIframe('./html/images/transition-on-hover.html')">Transition On Hover</a>
+      <a class="side-button" href="#" id="arrows"onclick="changeColor('arrows'); changeIframe('./html/images/arrows.html')">Arrows</a>
+      <a class="side-button" href="#" id="shapes"onclick="changeColor('shapes'); changeIframe('./html/images/shapes.html')">Shapes</a>
+      <a class="side-button" href="#" id="download-link"onclick="changeColor('download-link'); changeIframe('./html/images/download-link.html')">Download Link</a>
+      <a class="side-button" href="#" id="full-height-element"onclick="changeColor('full-height-element'); changeIframe('./html/images/full-height-element.html')">Full Height Element</a>
+      <a class="side-button" href="#" id="browser-window"onclick="changeColor('browser-window'); changeIframe('./html/images/browser-window.html')">Browser Window</a>
+      <a class="side-button" href="#" id="custom-scrollbar"onclick="changeColor('custom-scrollbar'); changeIframe('./html/images/custom-scrollbar.html')">Custom Scrollbar</a>
+      <a class="side-button" href="#" id="hide-scrollbar"onclick="changeColor('hide-scrollbar'); changeIframe('./html/images/hide-scrollbar.html')">Hide Scrollbar</a>
+      <a class="side-button" href="#" id="show-force-scrollbar"onclick="changeColor('show-force-scrollbar'); changeIframe('./html/images/show-force-scrollbar.html')">Show Force Scrollbar</a>
+      <a class="side-button" href="#" id="device-look"onclick="changeColor('device-look'); changeIframe('./html/images/device-look.html')">Device Look</a>
+      <a class="side-button" href="#" id="contenteditable-border"onclick="changeColor('contenteditable-border'); changeIframe('./html/images/contenteditable-border.html')">Contenteditable Border</a>
+      <a class="side-button" href="#" id="placeholder-color"onclick="changeColor('placeholder-color'); changeIframe('./html/images/placeholder-color.html')">Placeholder Color</a>
+      <a class="side-button" href="#" id="disable-resizing-textarea"onclick="changeColor('disable-resizing-textarea'); changeIframe('./html/images/disable-resizing-textarea.html')">Disable Resizing Textarea</a>
+      <a class="side-button" href="#" id="disable-text-selection"onclick="changeColor('disable-text-selection'); changeIframe('./html/images/disable-text-selection.html')">Disable Text Selection</a>
+      <a class="side-button" href="#" id="text-selection-color"onclick="changeColor('text-selection-color'); changeIframe('./html/images/text-selection-color.html')">Text Selection Color</a>
+      <a class="side-button" href="#" id="bullet-color"onclick="changeColor('bullet-color'); changeIframe('./html/images/bullet-color.html')">Bullet Color</a>
+      <a class="side-button" href="#" id="vertical-line"onclick="changeColor('vertical-line'); changeIframe('./html/images/vertical-line.html')">Vertical Line</a>
+      <a class="side-button" href="#" id="dividers"onclick="changeColor('dividers'); changeIframe('./html/images/dividers.html')">Dividers</a>
+      <a class="side-button" href="#" id="text-divider"onclick="changeColor('text-divider'); changeIframe('./html/images/text-divider.html')">Text Divider</a>
+      <a class="side-button" href="#" id="animate-icon"onclick="changeColor('animate-icon'); changeIframe('./html/images/animate-icon.html')">Animate Icon</a>
+      <a class="side-button" href="#" id="count-down-timer"onclick="changeColor('count-down-timer'); changeIframe('./html/images/count-down-timer.html')">Count Down Timer</a>
+      <a class="side-button" href="#" id="typewriter"onclick="changeColor('typewriter'); changeIframe('./html/images/typewriter.html')">Typewriter</a>
+      <a class="side-button" href="#" id="coming-soon-page"onclick="changeColor('coming-soon-page'); changeIframe('./html/images/coming-soon-page.html')">Coming Soon Page</a>
+      <a class="side-button" href="#" id="chat-messages"onclick="changeColor('chat-messages'); changeIframe('./html/images/chat-messages.html')">Chat Messages</a>
+      <a class="side-button" href="#" id="popup-chat-window"onclick="changeColor('popup-chat-window'); changeIframe('./html/images/popup-chat-window.html')">Popup Chat Window</a>
+      <a class="side-button" href="#" id="split-screen"onclick="changeColor('split-screen'); changeIframe('./html/images/split-screen.html')">Split Screen</a>
+      <a class="side-button" href="#" id="testimonials"onclick="changeColor('testimonials'); changeIframe('./html/images/testimonials.html')">Testimonials</a>
+      <a class="side-button" href="#" id="section-counter"onclick="changeColor('section-counter'); changeIframe('./html/images/section-counter.html')">Section Counter</a>
+      <a class="side-button" href="#" id="quotes-slideshow"onclick="changeColor('quotes-slideshow'); changeIframe('./html/images/quotes-slideshow.html')">Quotes Slideshow</a>
+      <a class="side-button" href="#" id="closable-list-items"onclick="changeColor('closable-list-items'); changeIframe('./html/images/closable-list-items.html')">Closable List Items</a>
+      <a class="side-button" href="#" id="typical-device-breakpoints"onclick="changeColor('typical-device-breakpoints'); changeIframe('./html/images/typical-device-breakpoints.html')">Typical Device Breakpoints</a>
+      <a class="side-button" href="#" id="draggable-html-element"onclick="changeColor('draggable-html-element'); changeIframe('./html/images/draggable-html-element.html')">Draggable Html Element</a>
+      <a class="side-button" href="#" id="js-media-queries"onclick="changeColor('js-media-queries'); changeIframe('./html/images/js-media-queries.html')">Js Media Queries</a>
+      <a class="side-button" href="#" id="sintax-higlighter"onclick="changeColor('sintax-higlighter'); changeIframe('./html/images/sintax-higlighter.html')">Sintax Higlighter</a>
+      <a class="side-button" href="#" id="js-animations"onclick="changeColor('js-animations'); changeIframe('./html/images/js-animations.html')">Js Animations</a>
+      <a class="side-button" href="#" id="js-string-length"onclick="changeColor('js-string-length'); changeIframe('./html/images/js-string-length.html')">Js String Length</a>
+      <a class="side-button" href="#" id="js-exponentiation"onclick="changeColor('js-exponentiation'); changeIframe('./html/images/js-exponentiation.html')">Js Exponentiation</a>
+      <a class="side-button" href="#" id="js-default-parameters"onclick="changeColor('js-default-parameters'); changeIframe('./html/images/js-default-parameters.html')">Js Default Parameters</a>
+      <a class="side-button" href="#" id="js-random-numbers"onclick="changeColor('js-random-numbers'); changeIframe('./html/images/js-random-numbers.html')">Js Random Numbers</a>
+      <a class="side-button" href="#" id="js-sort-numeric-array"onclick="changeColor('js-sort-numeric-array'); changeIframe('./html/images/js-sort-numeric-array.html')">Js Sort Numeric Array</a>
+      <a class="side-button" href="#" id="js-spread-operator"onclick="changeColor('js-spread-operator'); changeIframe('./html/images/js-spread-operator.html')">Js Spread Operator</a>
+      <a class="side-button" href="#" id="js-scroll-into-view"onclick="changeColor('js-scroll-into-view'); changeIframe('./html/images/js-scroll-into-view.html')">Js Scroll Into View</a>
+      <a class="side-button" href="#" id="get-current-date"onclick="changeColor('get-current-date'); changeIframe('./html/images/get-current-date.html')">Get Current Date</a>
+      <a class="side-button" href="#" id="get-current-url"onclick="changeColor('get-current-url'); changeIframe('./html/images/get-current-url.html')">Get Current Url</a>
+      <a class="side-button" href="#" id="get-current-screen-size"onclick="changeColor('get-current-screen-size'); changeIframe('./html/images/get-current-screen-size.html')">Get Current Screen Size</a>
+      <a class="side-button" href="#" id="get-iframe-elements"onclick="changeColor('get-iframe-elements'); changeIframe('./html/images/get-iframe-elements.html')">Get Iframe Elements</a>
+
+      
+    </nav>
+    <main>
+
+      <section id="section1">
+        <div class="section-container" id="section-container">
+          <iframe id="iframe1" src="" style="width: 100%; max-height: 460px;" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section-container" id="section-container2">
+          <iframe id="iframe2" src="" style="width: 100%;" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <p>Powered by <a href="https://github.com/bumbitzu" target="_blank">Bumbitzu</a></p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </main>
+    <script src="./js/site.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Buttons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <style>
+      #iframe1 {
+        border: solid #525252;
+        border-top: 40px solid #525252;
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+      #iframe2 {
+        margin-bottom: 100px;
+        transition: opacity 0.5s ease-in-out;
+        /* Adaugă tranziția de fade */
+      }
+    </style>
+  </head>
+
+  <body onload="init('./html/buttons/alert-button.html','alert-button'); ">
+    <!-- Navbar -->
+    <div class="nav-bar" id="nav-bar">
+      <div class="nav-content">
+        <a class="nav-small-display" href="javascript:void(0)" onclick="navBtn()"><i class="fa fa-compass"></i></a>
+        <a class="menu-small-display" href="javascript:void(1)" onclick="openSide()"><i class="fa fa-bars"></i></a>
+        <a href="menus.html" class="nav-button">Menus</a>
+        <a href="images.html" class="nav-button">Images</a>
+        <a href="#" class="nav-button" style="background-color:white; color:black">Butons</a>
+        <a href="forms.html" class="nav-button">Forms</a>
+        <a href="filters.html" class="nav-button">Filters</a>
+        <a href="tables.html" class="nav-button">Tables</a>
+        <a href="more.html" class="nav-button">More</a>
+      </div>
+    </div>
+&lt;
+    <!-- Sidebar -->
+    <nav class="side-bar" id="side-bar">
+      <a href="javascript:void(0)" onclick="closeSide()" class="close-sidebar" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="bar-item"><b>Buttons</b></h4>
+      <a class="side-button" href="#" id="alert-button"onclick="changeColor('alert-button'); changeIframe('./html/images/alert-button.html')">Alert-Button</a>
+      <a class="side-button" href="#" id="outline-button"onclick="changeColor('outline-button'); changeIframe('./html/images/outline-button.html')">Outline Button</a>
+      <a class="side-button" href="#" id="split-button"onclick="changeColor('split-button'); changeIframe('./html/images/split-button.html')">Split Button</a>
+      <a class="side-button" href="#" id="animated-button"onclick="changeColor('animated-button'); changeIframe('./html/images/animated-button.html')">Animated-Button</a>
+      <a class="side-button" href="#" id="fading-button"onclick="changeColor('fading-button'); changeIframe('./html/images/fading-button.html')">Fading-Button</a>
+      <a class="side-button" href="#" id="social-media-button"onclick="changeColor('social-media-button'); changeIframe('./html/images/social-media-button.html')">Social-Media-Button</a>
+      <a class="side-button" href="#" id="read-more-button"onclick="changeColor('read-more-button'); changeIframe('./html/images/read-more-button.html')">Read More Button</a>
+      <a class="side-button" href="#" id="loading-button"onclick="changeColor('loading-button'); changeIframe('./html/images/loading-button.html')">Loading Button</a>
+      <a class="side-button" href="#" id="download-button"onclick="changeColor('download-button'); changeIframe('./html/images/download-button.html')">Download Button</a>
+      <a class="side-button" href="#" id="pill-button"onclick="changeColor('pill-button'); changeIframe('./html/images/pill-button.html')">Pill Button</a>
+      <a class="side-button" href="#" id="notification-button"onclick="changeColor('notification-button'); changeIframe('./html/images/notification-button.html')">Notification Button</a>
+      <a class="side-button" href="#" id="icon-button"onclick="changeColor('icon-button'); changeIframe('./html/images/icon-button.html')">Icon Button</a>
+      <a class="side-button" href="#" id="next-prev-button"onclick="changeColor('next-prev-button'); changeIframe('./html/images/next-prev-button.html')">Next Prev Button</a>
+      <a class="side-button" href="#" id="more-button-in-nav"onclick="changeColor('more-button-in-nav'); changeIframe('./html/images/more-button-in-nav.html')">More Button In Nav</a>
+      <a class="side-button" href="#" id="block-button"onclick="changeColor('block-button'); changeIframe('./html/images/block-button.html')">Block Button</a>
+      <a class="side-button" href="#" id="text-button"onclick="changeColor('text-button'); changeIframe('./html/images/text-button.html')">Text Button</a>
+      <a class="side-button" href="#" id="round-button"onclick="changeColor('round-button'); changeIframe('./html/images/round-button.html')">Round Button</a>
+      <a class="side-button" href="#" id="scroll-to-top-button"onclick="changeColor('scroll-to-top-button'); changeIframe('./html/images/scroll-to-top-button.html')">Scroll To Top Button</a>
+    </nav>
+    <main>
+
+      <section id="section1">
+        <div class="section-container" id="section-container">
+          <iframe id="iframe1" src="" style="width: 100%; max-height: 460px;" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section-container" id="section-container2">
+          <iframe id="iframe2" src="" style="width: 100%;" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <p>Powered by <a href="https://github.com/bumbitzu" target="_blank">Bumbitzu</a></p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </main>
+    <script src="./js/site.js"></script>
+  </body>
+
+</html>
