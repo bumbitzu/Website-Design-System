@@ -1,72 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/code.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
-      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Document</title>
-  <style>
-    html,body,h1,h2,h3,h4,h5,h6 {
-      font-family: "Roboto", sans-serif;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  </style>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 </head>
 <body>
 
-  <!--HTML------------------------------>
-  <div class="code">
-    <h3>HTML</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-html">
-<!--HTML-->
-</code>
-      </pre>
-    </div>
+<h2>Responsive Image Gallery</h2>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="../../img/a_new_day.jpg">
+      <img src="../../img/a_new_day.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
   </div>
-  <!--HTML------------------------------>
+</div>
 
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--JS-->
-</code>
-      </pre>
-    </div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="../../img/aerial_view_of_rainbow.jpg">
+      <img src="../../img/aerial_view_of_rainbow.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
   </div>
-  <!--JS-------------------------------->
-  <div style="height:50px;"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
-integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
-integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="../../img/alps_meadow_germany.jpg">
+      <img src="../../img/alps_meadow_germany.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="../../img/amazing.jpg">
+      <img src="../../img/amazing.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
+
 </body>
 </html>
+
+
