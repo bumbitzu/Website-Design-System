@@ -1,39 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
 
-  <head>
+  <!--HTML------------------------------>
+  <div class="code">
+    <h3>HTML</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-html">
+&lt;div class="header"&gt;
+  &lt;h1&gt;Responsive Image Grid&lt;/h1&gt;
+  &lt;p&gt;Resize the browser window to see the responsive effect.&lt;/p&gt;
+&lt;/div&gt;
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+&lt;!-- Photo Grid --&gt;
+&lt;div class="row"&gt; 
+  &lt;div class="column"&gt;
+    &lt;img src="../../img/a_new_day.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/alps_meadow_germany.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/amazing.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/amazing_sunset.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/at-the-beach.jpeg" style="width:100%"&gt;
+    &lt;img src="../../img/cute_red_panda.jpg" style="width:100%"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/beach_sunrise.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/cute_red_panda.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/amazing_sunset.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/alps_meadow_germany.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/a_new_day.jpg" style="width:100%"&gt;
+  &lt;/div&gt;  
+  &lt;div class="column"&gt;
+    &lt;img src="../../img/amazing.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/alps_meadow_germany.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/amazing_sunset.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/at-the-beach.jpeg" style="width:100%"&gt;
+    &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/cute_red_panda.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/beach_sunrise.jpg" style="width:100%"&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src="../../img/at-the-beach.jpeg" style="width:100%"&gt;
+    &lt;img src="../../img/alps_meadow_germany.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/cute_red_panda.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/amazing_sunset.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/aerial_view_of_rainbow.jpg" style="width:100%"&gt;
+    &lt;img src="../../img/beach_sunrise.jpg" style="width:100%"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--HTML------------------------------>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
-
-    </script>
-  </body>
-
+  <!--CSS------------------------------->
+  <div class="code">
+    <h3>CSS</h3>
+    <div class="code-wrapper">
+      <pre>
+<code class="language-css">
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    margin: 0 auto;;
+    -ms-flex: 24%; /* IE10 */
+    flex: 24%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+</code>
+      </pre>
+    </div>
+  </div>
+  <!--CSS------------------------------->
+  <div style="height:50px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
+integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
 </html>
