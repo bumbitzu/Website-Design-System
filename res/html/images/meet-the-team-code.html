@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/code.css">
@@ -29,7 +29,50 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Responsive "Meet The Team" Section&lt;/h2&gt;
+  &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+  &lt;br&gt;
+  
+  &lt;div class="row"&gt;
+    &lt;div class="column"&gt;
+      &lt;div class="card"&gt;
+        &lt;img src="../../img/img_avatar3.png" alt="Jane" style="width:100%"&gt;
+        &lt;div class="container"&gt;
+          &lt;h2&gt;Jane Doe&lt;/h2&gt;
+          &lt;p class="title"&gt;CEO & Founder&lt;/p&gt;
+          &lt;p&gt;Some text that describes me lorem ipsum ipsum lorem.&lt;/p&gt;
+          &lt;p&gt;example@example.com&lt;/p&gt;
+          &lt;p&gt;&lt;button class="button"&gt;Contact&lt;/button&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="column"&gt;
+      &lt;div class="card"&gt;
+        &lt;img src="../../img/img_avatar3.png" alt="Mike" style="width:100%"&gt;
+        &lt;div class="container"&gt;
+          &lt;h2&gt;Mike Ross&lt;/h2&gt;
+          &lt;p class="title"&gt;Art Director&lt;/p&gt;
+          &lt;p&gt;Some text that describes me lorem ipsum ipsum lorem.&lt;/p&gt;
+          &lt;p&gt;example@example.com&lt;/p&gt;
+          &lt;p&gt;&lt;button class="button"&gt;Contact&lt;/button&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="column"&gt;
+      &lt;div class="card"&gt;
+        &lt;img src="../../img/img_avatar3.png" alt="John" style="width:100%"&gt;
+        &lt;div class="container"&gt;
+          &lt;h2&gt;John Doe&lt;/h2&gt;
+          &lt;p class="title"&gt;Designer&lt;/p&gt;
+          &lt;p&gt;Some text that describes me lorem ipsum ipsum lorem.&lt;/p&gt;
+          &lt;p&gt;example@example.com&lt;/p&gt;
+          &lt;p&gt;&lt;button class="button"&gt;Contact&lt;/button&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +85,66 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
