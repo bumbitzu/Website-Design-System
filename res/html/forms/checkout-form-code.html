@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,7 +29,84 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Responsive Checkout Form&lt;/h2&gt;
+  &lt;p&gt;Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.&lt;/p&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-75"&gt;
+      &lt;div class="container"&gt;
+        &lt;form action="/action_page.php"&gt;
+        
+          &lt;div class="row"&gt;
+            &lt;div class="col-50"&gt;
+              &lt;h3&gt;Billing Address&lt;/h3&gt;
+              &lt;label for="fname"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt; Full Name&lt;/label&gt;
+              &lt;input type="text" id="fname" name="firstname" placeholder="John M. Doe"&gt;
+              &lt;label for="email"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt; Email&lt;/label&gt;
+              &lt;input type="text" id="email" name="email" placeholder="john@example.com"&gt;
+              &lt;label for="adr"&gt;&lt;i class="fa fa-address-card-o"&gt;&lt;/i&gt; Address&lt;/label&gt;
+              &lt;input type="text" id="adr" name="address" placeholder="542 W. 15th Street"&gt;
+              &lt;label for="city"&gt;&lt;i class="fa fa-institution"&gt;&lt;/i&gt; City&lt;/label&gt;
+              &lt;input type="text" id="city" name="city" placeholder="New York"&gt;
+  
+              &lt;div class="row"&gt;
+                &lt;div class="col-50"&gt;
+                  &lt;label for="state"&gt;State&lt;/label&gt;
+                  &lt;input type="text" id="state" name="state" placeholder="NY"&gt;
+                &lt;/div&gt;
+                &lt;div class="col-50"&gt;
+                  &lt;label for="zip"&gt;Zip&lt;/label&gt;
+                  &lt;input type="text" id="zip" name="zip" placeholder="10001"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+  
+            &lt;div class="col-50"&gt;
+              &lt;h3&gt;Payment&lt;/h3&gt;
+              &lt;label for="fname"&gt;Accepted Cards&lt;/label&gt;
+              &lt;div class="icon-container"&gt;
+                &lt;i class="fa fa-cc-visa" style="color:navy;"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-cc-amex" style="color:blue;"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-cc-mastercard" style="color:red;"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-cc-discover" style="color:orange;"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;label for="cname"&gt;Name on Card&lt;/label&gt;
+              &lt;input type="text" id="cname" name="cardname" placeholder="John More Doe"&gt;
+              &lt;label for="ccnum"&gt;Credit card number&lt;/label&gt;
+              &lt;input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"&gt;
+              &lt;label for="expmonth"&gt;Exp Month&lt;/label&gt;
+              &lt;input type="text" id="expmonth" name="expmonth" placeholder="September"&gt;
+              &lt;div class="row"&gt;
+                &lt;div class="col-50"&gt;
+                  &lt;label for="expyear"&gt;Exp Year&lt;/label&gt;
+                  &lt;input type="text" id="expyear" name="expyear" placeholder="2018"&gt;
+                &lt;/div&gt;
+                &lt;div class="col-50"&gt;
+                  &lt;label for="cvv"&gt;CVV&lt;/label&gt;
+                  &lt;input type="text" id="cvv" name="cvv" placeholder="352"&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            
+          &lt;/div&gt;
+          &lt;label&gt;
+            &lt;input type="checkbox" checked="checked" name="sameadr"&gt; Shipping address same as billing
+          &lt;/label&gt;
+          &lt;input type="submit" value="Continue to checkout" class="btn"&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-25"&gt;
+      &lt;div class="container"&gt;
+        &lt;h4&gt;Cart &lt;span class="price" style="color:black"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; &lt;b&gt;4&lt;/b&gt;&lt;/span&gt;&lt;/h4&gt;
+        &lt;p&gt;&lt;a href="#"&gt;Product 1&lt;/a&gt; &lt;span class="price"&gt;$15&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#"&gt;Product 2&lt;/a&gt; &lt;span class="price"&gt;$5&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#"&gt;Product 3&lt;/a&gt; &lt;span class="price"&gt;$8&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#"&gt;Product 4&lt;/a&gt; &lt;span class="price"&gt;$2&lt;/span&gt;&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;p&gt;Total &lt;span class="price" style="color:black"&gt;&lt;b&gt;$30&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +119,114 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  a {
+    color: #2196F3;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
