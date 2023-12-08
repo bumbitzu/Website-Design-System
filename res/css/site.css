@@ -185,7 +185,27 @@ footer{
   text-decoration: none;
   font-weight: 600;
 }
-
+.new-tab-button{
+  background-color: #333333;
+  width: fit-content;
+  color: white;
+  padding: 15px;
+  float: right;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.new-tab-button a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  
+}
+.new-tab-button i{
+  font-size: 20px;
+}
+.new-tab-button:hover{
+  background-color: #5a5a5a;
+}
 /*==========================*/
 @media (max-width: 993px){
   .side-bar{
