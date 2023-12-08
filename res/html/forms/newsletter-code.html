@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,7 +29,26 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;CSS Newsletter&lt;/h2&gt;
+
+  &lt;form action="/action_page.php"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Subscribe to our Newsletter&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.&lt;/p&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="container" style="background-color:white"&gt;
+      &lt;input type="text" placeholder="Name" name="name" required&gt;
+      &lt;input type="text" placeholder="Email address" name="mail" required&gt;
+      &lt;label&gt;
+        &lt;input type="checkbox" checked="checked" name="subscribe"&gt; Daily Newsletter
+      &lt;/label&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="container"&gt;
+      &lt;input type="submit" value="Subscribe"&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +61,45 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+  form {
+    border: 3px solid #f1f1f1;
+    font-family: Arial;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  input[type=checkbox] {
+    margin-top: 16px;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
