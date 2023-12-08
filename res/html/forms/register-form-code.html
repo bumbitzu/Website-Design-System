@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,7 +29,30 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;form action="/action_page.php"&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Register&lt;/h1&gt;
+    &lt;p&gt;Please fill in this form to create an account.&lt;/p&gt;
+    &lt;hr&gt;
+
+    &lt;label for="email"&gt;&lt;b&gt;Email&lt;/b&gt;&lt;/label&gt;
+    &lt;input type="text" placeholder="Enter Email" name="email" id="email" required&gt;
+
+    &lt;label for="psw"&gt;&lt;b&gt;Password&lt;/b&gt;&lt;/label&gt;
+    &lt;input type="password" placeholder="Enter Password" name="psw" id="psw" required&gt;
+
+    &lt;label for="psw-repeat"&gt;&lt;b&gt;Repeat Password&lt;/b&gt;&lt;/label&gt;
+    &lt;input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required&gt;
+    &lt;hr&gt;
+    &lt;p&gt;By creating an account you agree to our &lt;a href="#"&gt;Terms & Privacy&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;button type="submit" class="registerbtn"&gt;Register&lt;/button&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="container signin"&gt;
+    &lt;p&gt;Already have an account? &lt;a href="#"&gt;Sign in&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +65,73 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
