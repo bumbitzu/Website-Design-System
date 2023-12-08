@@ -108,3 +108,10 @@ function init(link,buttonId)
   changeColor(buttonId)
   changeIframe(link);
 }
+function openInFullTab()
+{
+  let iframe1 = document.getElementById("iframe1");
+  let anchor = document.getElementById("newTab");
+  anchor.href = iframe1.src;
+  console.log(anchor.href);
+}
