@@ -1,39 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+#text {display:none;color:red}
+</style>
+<body style="height: 300px; overflow: hidden;">
 
-  <head>
+<h3>Detect Caps Lock</h3>
+<p>Press the "Caps Lock" key inside the input field to trigger the function.</p>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<input id="myInput" value="Some text..">
+<p id="text">WARNING! Caps lock is ON.</p>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<script>
+var input = document.getElementById("myInput");
+var text = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});
+</script>
 
-    </script>
-  </body>
-
+</body>
 </html>
