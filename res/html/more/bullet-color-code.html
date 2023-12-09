@@ -29,7 +29,14 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Change Bullet Color of List Items&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Adele&lt;/li&gt;
+    &lt;li&gt;Agnes&lt;/li&gt;
+    &lt;li&gt;Billy&lt;/li&gt;
+    &lt;li&gt;Bob&lt;/li&gt;
+  &lt;/ul&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +49,23 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  ul {
+    list-style: none;
+  }
+  
+  ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
 
-  <head>
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+</style>
+<body>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
+<h1>JavaScript Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+
+<br>
+<button onclick="move()">Click Me</button> 
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
       }
+    }
+  }
+}
+</script>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
-
-    </script>
-  </body>
-
+</body>
 </html>

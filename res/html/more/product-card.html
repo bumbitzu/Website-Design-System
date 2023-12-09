@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
 
-  <head>
+.price {
+  color: grey;
+  font-size: 22px;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<h2 style="text-align:center">Product Card</h2>
 
-    </script>
-  </body>
+<div class="card">
+  <img src="../../img/at-the-beach.jpeg" alt="alt text" style="width:100%">
+  <h1>Caraibe</h1>
+  <p class="price">$767</p>
+  <p>FREE cancellation on select hotels ✓ Bundle Caribbean flight + hotel & save up to 100% off your flight with Expedia. Book your vacation package now!</p>
+  <p><button>Add to Cart</button></p>
+</div>
 
+</body>
 </html>

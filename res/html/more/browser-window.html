@@ -1,39 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+}
 
-  <head>
+* {
+  box-sizing: border-box;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+.dot-1 {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+.container-1 {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+.top-1 {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
 
-    </script>
-  </body>
+.content-1 {
+  padding: 10px;
+}
+/*======================*/
+/* The browser window */
+.container-2 {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
 
-</html>
+/* Container for columns and the top "toolbar" */
+.row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 10%;
+}
+
+.middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three dots */
+.dot-2 {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Style the input field */
+input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+/* Three bars (hamburger menu) */
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+/* Page content */
+.content-2 {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container-1">
+  <div class="top-1">
+    <span class="dot-1"></span>
+    <span class="dot-1"></span>
+    <span class="dot-1"></span>
+  </div>
+
+  <div class="content-1">
+    <h3>Browser Window</h3>
+    <p>How to create a browser window look with CSS.</p>
+  </div>
+</div>
+<!--====================-->
+<div style="height: 30px;"></div>
+<!--====================-->
+<div class="container-2">
+  <div class="row">
+    <div class="column left">
+      <span class="dot-2" style="background:#ED594A;"></span>
+      <span class="dot-2" style="background:#FDD800;"></span>
+      <span class="dot-2" style="background:#5AC05A;"></span>
+    </div>
+    <div class="column middle">
+      <input type="text" value="https://bumbitzu.com">
+    </div>
+    <div class="column right">
+      <div style="float:right">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-2">
+    <h3>Browser Window</h3>
+    <p>How to create a detailed browser window look with CSS.</p>
+  </div>
+</div>
+
+</body>
+</html> 

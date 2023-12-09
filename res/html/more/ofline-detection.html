@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body>
 
-  <head>
+<p>Click the button to see if the browser is online.</p>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<button onclick="myFunction()">Try it</button>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<p id="demo"></p>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<script>
+function myFunction() {
+  var x = "Is the browser online? " + navigator.onLine;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
 
-    </script>
-  </body>
-
+</body>
 </html>

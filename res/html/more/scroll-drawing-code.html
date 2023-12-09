@@ -29,7 +29,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Scroll down this window to draw a triangle.&lt;/h2&gt;
+  &lt;p&gt;Scroll back up to reverse the drawing.&lt;/p&gt;
+  
+  &lt;svg id="mySVG"&gt;
+    &lt;path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z" /&gt;
+    Sorry, your browser does not support inline SVG.
+  &lt;/svg&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +48,18 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    height: 2000px;
+    background: #f1f1f1;
+  }
+  
+  #mySVG {
+    position: fixed;
+    top: 15%;
+    width: 400px;
+    height: 210px;
+    margin-left:-50px;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +72,27 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  // Get the id of the <path> element and the length of <path>
+    var triangle = document.getElementById("triangle");
+    var length = triangle.getTotalLength();
+    
+    // The start position of the drawing
+    triangle.style.strokeDasharray = length;
+    
+    // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+    triangle.style.strokeDashoffset = length;
+    
+    // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+    window.addEventListener("scroll", myFunction);
+    
+    function myFunction() {
+    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+      var draw = length * scrollpercent;
+      
+      // Reverse the drawing (when scrolling upwards)
+      triangle.style.strokeDashoffset = length - draw;
+    }
 </code>
       </pre>
     </div>

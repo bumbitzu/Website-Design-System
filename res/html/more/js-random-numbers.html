@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body>
 
-  <head>
+<h2>JavaScript Math.random()</h2>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<p>Every time you click the button, getRndInteger(min, max) returns a random number between 0 
+and 9 (both included):</p>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<p id="demo"></p>
 
-    </script>
-  </body>
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
+const rndInt = randomIntFromInterval(1, 6)
+</script>
+
+</body>
 </html>

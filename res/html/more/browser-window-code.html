@@ -29,7 +29,45 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;div class="container-1"&gt;
+  &lt;div class="top-1"&gt;
+    &lt;span class="dot-1"&gt;&lt;/span&gt;
+    &lt;span class="dot-1"&gt;&lt;/span&gt;
+    &lt;span class="dot-1"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="content-1"&gt;
+    &lt;h3&gt;Browser Window&lt;/h3&gt;
+    &lt;p&gt;How to create a browser window look with CSS.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--====================--&gt;
+&lt;div style="height: 30px;"&gt;&lt;/div&gt;
+&lt;!--====================--&gt;
+&lt;div class="container-2"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column left"&gt;
+      &lt;span class="dot-2" style="background:#ED594A;"&gt;&lt;/span&gt;
+      &lt;span class="dot-2" style="background:#FDD800;"&gt;&lt;/span&gt;
+      &lt;span class="dot-2" style="background:#5AC05A;"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="column middle"&gt;
+      &lt;input type="text" value="https://bumbitzu.com"&gt;
+    &lt;/div&gt;
+    &lt;div class="column right"&gt;
+      &lt;div style="float:right"&gt;
+        &lt;span class="bar"&gt;&lt;/span&gt;
+        &lt;span class="bar"&gt;&lt;/span&gt;
+        &lt;span class="bar"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="content-2"&gt;
+    &lt;h3&gt;Browser Window&lt;/h3&gt;
+    &lt;p&gt;How to create a detailed browser window look with CSS.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +80,111 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    font-family: Arial;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .dot-1 {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .container-1 {
+    border: 3px solid #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .top-1 {
+    padding: 10px;
+    background: #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .content-1 {
+    padding: 10px;
+  }
+  /*======================*/
+
+  .container-2 {
+    border: 3px solid #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .row {
+    padding: 10px;
+    background: #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .column {
+    float: left;
+  }
+  
+  .left {
+    width: 15%;
+  }
+  
+  .right {
+    width: 10%;
+  }
+  
+  .middle {
+    width: 75%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .dot-2 {
+    margin-top: 4px;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    margin-top: -8px;
+    height: 25px;
+    color: #666;
+    padding: 5px;
+  }
+  
+  .bar {
+    width: 17px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 3px 0;
+    display: block;
+  }
+  
+  .content-2 {
+    padding: 10px;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

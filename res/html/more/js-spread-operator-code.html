@@ -29,25 +29,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;p&gt;The "spread" operator spreads elements of iterable objects:&lt;/p&gt;
+  &lt;p id="demo"&gt;&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +43,11 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  const numbersOne = [1, 2, 3];
+  const numbersTwo = [4, 5, 6];
+  const numbersCombined = [...numbersOne, ...numbersTwo];
+  
+  document.getElementById("demo").innerHTML = numbersCombined; 
 </code>
       </pre>
     </div>

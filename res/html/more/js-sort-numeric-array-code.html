@@ -29,25 +29,22 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;How To Sort an Array Numerically&lt;/h1&gt;
+
+  &lt;p&gt;Sort the array in ascending order:&lt;/p&gt;
+  
+  &lt;p id="demo1"&gt;&lt;/p&gt;
+  &lt;p id="demo2"&gt;&lt;/p&gt;
+  
+  &lt;p&gt;Sort the array in descending order:&lt;/p&gt;
+  
+  &lt;p id="demo3"&gt;&lt;/p&gt;
+  &lt;p id="demo4"&gt;&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +52,17 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  const points1 = [40, 100, 1, 5, 25, 10];
+  document.getElementById("demo1").innerHTML = points1;  
+  
+  points1.sort(function(a, b){return a - b});
+  document.getElementById("demo2").innerHTML = points1;
+  
+  const points2 = [40, 100, 1, 5, 25, 10];
+  document.getElementById("demo3").innerHTML = points2;  
+  
+  points2.sort(function(a, b){return b - a});
+  document.getElementById("demo4").innerHTML = points2;
 </code>
       </pre>
     </div>

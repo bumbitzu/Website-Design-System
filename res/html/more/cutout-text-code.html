@@ -29,7 +29,15 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Responsive Cutout Text Effect&lt;/h2&gt;
+
+  &lt;div class="image-container"&gt;
+    &lt;div class="text"&gt;NATURE&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;p&gt;This example creates a responsive cutout text/knockout text - text that appears cut out on top of a background image.&lt;/p&gt;
+  &lt;p&gt;Resize the browser window to see the responsive effect.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This example does not work in Internet Explorer or Edge.&lt;/p&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +50,35 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {font-family: Arial, Helvetica, sans-serif;}
+
+  .image-container {
+    background-image: url("img_nature.jpg");
+    background-size: cover;
+    position: relative;
+    height: 300px;
+  }
+  
+  .text {
+    background-color: white;
+    color: black;
+    font-size: 10vw; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

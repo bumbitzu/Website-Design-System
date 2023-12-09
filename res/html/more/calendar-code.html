@@ -29,7 +29,66 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;CSS Calendar&lt;/h1&gt;
+
+  &lt;div class="month"&gt;      
+    &lt;ul&gt;
+      &lt;li class="prev"&gt;&#10094;&lt;/li&gt;
+      &lt;li class="next"&gt;&#10095;&lt;/li&gt;
+      &lt;li&gt;
+        December&lt;br&gt;
+        &lt;span style="font-size:18px"&gt;2023&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  
+  &lt;ul class="weekdays"&gt;
+    &lt;li&gt;Mo&lt;/li&gt;
+    &lt;li&gt;Tu&lt;/li&gt;
+    &lt;li&gt;We&lt;/li&gt;
+    &lt;li&gt;Th&lt;/li&gt;
+    &lt;li&gt;Fr&lt;/li&gt;
+    &lt;li&gt;Sa&lt;/li&gt;
+    &lt;li&gt;Su&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;ul class="days"&gt;  
+    &lt;li&gt; &lt;/li&gt;
+    &lt;li&gt; &lt;/li&gt;
+    &lt;li&gt; &lt;/li&gt;
+    &lt;li&gt; &lt;/li&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;2&lt;/li&gt;
+    &lt;li&gt;3&lt;/li&gt;
+    &lt;li&gt;4&lt;/li&gt;
+    &lt;li&gt;5&lt;/li&gt;
+    &lt;li&gt;&lt;span class="active"&gt;6&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;7&lt;/li&gt;
+    &lt;li&gt;8&lt;/li&gt;
+    &lt;li&gt;9&lt;/li&gt;
+    &lt;li&gt;10&lt;/li&gt;
+    &lt;li&gt;11&lt;/li&gt;
+    &lt;li&gt;12&lt;/li&gt;
+    &lt;li&gt;13&lt;/li&gt;
+    &lt;li&gt;14&lt;/li&gt;
+    &lt;li&gt;15&lt;/li&gt;
+    &lt;li&gt;16&lt;/li&gt;
+    &lt;li&gt;17&lt;/li&gt;
+    &lt;li&gt;18&lt;/li&gt;
+    &lt;li&gt;19&lt;/li&gt;
+    &lt;li&gt;20&lt;/li&gt;
+    &lt;li&gt;21&lt;/li&gt;
+    &lt;li&gt;22&lt;/li&gt;
+    &lt;li&gt;23&lt;/li&gt;
+    &lt;li&gt;24&lt;/li&gt;
+    &lt;li&gt;25&lt;/li&gt;
+    &lt;li&gt;26&lt;/li&gt;
+    &lt;li&gt;27&lt;/li&gt;
+    &lt;li&gt;28&lt;/li&gt;
+    &lt;li&gt;29&lt;/li&gt;
+    &lt;li&gt;30&lt;/li&gt;
+    &lt;li&gt;31&lt;/li&gt;
+  &lt;/ul&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +101,92 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  * {box-sizing: border-box;}
+  ul {list-style-type: none;}
+  body {font-family: Verdana, sans-serif;}
+  
+  .month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+  }
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  .days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

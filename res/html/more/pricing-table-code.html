@@ -29,7 +29,44 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2 style="text-align:center"&gt;Responsive Pricing Tables&lt;/h2&gt;
+  &lt;p style="text-align:center"&gt;Resize the browser window to see the effect.&lt;/p&gt;
+  
+  &lt;div class="columns"&gt;
+    &lt;ul class="price"&gt;
+      &lt;li class="header"&gt;Basic&lt;/li&gt;
+      &lt;li class="grey"&gt;$ 9.99 / year&lt;/li&gt;
+      &lt;li&gt;10GB Storage&lt;/li&gt;
+      &lt;li&gt;10 Emails&lt;/li&gt;
+      &lt;li&gt;10 Domains&lt;/li&gt;
+      &lt;li&gt;1GB Bandwidth&lt;/li&gt;
+      &lt;li class="grey"&gt;&lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="columns"&gt;
+    &lt;ul class="price"&gt;
+      &lt;li class="header" style="background-color:#04AA6D"&gt;Pro&lt;/li&gt;
+      &lt;li class="grey"&gt;$ 24.99 / year&lt;/li&gt;
+      &lt;li&gt;25GB Storage&lt;/li&gt;
+      &lt;li&gt;25 Emails&lt;/li&gt;
+      &lt;li&gt;25 Domains&lt;/li&gt;
+      &lt;li&gt;2GB Bandwidth&lt;/li&gt;
+      &lt;li class="grey"&gt;&lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="columns"&gt;
+    &lt;ul class="price"&gt;
+      &lt;li class="header"&gt;Premium&lt;/li&gt;
+      &lt;li class="grey"&gt;$ 49.99 / year&lt;/li&gt;
+      &lt;li&gt;50GB Storage&lt;/li&gt;
+      &lt;li&gt;50 Emails&lt;/li&gt;
+      &lt;li&gt;50 Domains&lt;/li&gt;
+      &lt;li&gt;5GB Bandwidth&lt;/li&gt;
+      &lt;li class="grey"&gt;&lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +79,66 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  * {
+    box-sizing: border-box;
+  }
+  
+  .columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+  }
+  
+  .price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  .price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+  }
+  
+  .button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

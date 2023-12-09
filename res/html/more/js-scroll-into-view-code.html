@@ -29,7 +29,21 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;The Element Object&lt;/h1&gt;
+  &lt;h2&gt;The scrollIntoView() Method&lt;/h2&gt;
+  
+  &lt;button onclick="myFunction()"&gt;Scroll&lt;/button&gt;
+  
+  &lt;p&gt;Click "Scroll" to scroll to the top of the element with id="content".&lt;/p&gt;
+  
+  
+  &lt;div id="myDIV"&gt;
+    &lt;div id="content"&gt;
+    &lt;p&gt;Some text inside an element.&lt;/p&gt;
+    &lt;p&gt;Some text inside an element.&lt;/p&gt;
+    &lt;p&gt;Some text inside an element.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +56,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  #myDIV {
+    height: 250px;
+    width: 250px;
+    overflow: auto;
+    background: coral;
+  }
+  
+  #content {
+    margin:500px;
+    height: 800px;
+    width: 2000px;
+    background-color: coral;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +81,10 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    const element = document.getElementById("content");
+    element.scrollIntoView();
+  }
 </code>
       </pre>
     </div>

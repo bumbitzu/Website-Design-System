@@ -29,7 +29,10 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Toggle Dark/Light Mode&lt;/h2&gt;
+  &lt;p&gt;Click the button to toggle between dark and light mode for this page.&lt;/p&gt;
+  
+  &lt;button onclick="myFunction()"&gt;Toggle dark mode&lt;/button&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +45,17 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +68,10 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
 </code>
       </pre>
     </div>

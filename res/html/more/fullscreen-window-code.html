@@ -29,25 +29,21 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Fullscreen with JavaScript&lt;/h2&gt;
+  &lt;p&gt;Click on the button to open the video in fullscreen mode.&lt;/p&gt;
+  &lt;button onclick="openFullscreen();"&gt;Open Video in Fullscreen Mode&lt;/button&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Press the "Esc" key to exit full screen.&lt;/p&gt;
+  
+  &lt;video width="100%" controls id="myvideo"&gt;
+    &lt;source src="rain.mp4" type="video/mp4"&gt;
+    &lt;source src="rain.ogg" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +51,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var elem = document.getElementById("myvideo");
+  function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
 </code>
       </pre>
     </div>

@@ -29,7 +29,14 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;div id="header"&gt;Header&lt;/div&gt;
+
+  &lt;div style="margin-top:200px;padding:15px 15px 2500px;font-size:30px"&gt;
+    &lt;p&gt;&lt;b&gt;This example demonstrates how to shrink a header when the user starts to scroll the page.&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;Scroll down this frame to see the effect!&lt;/p&gt;
+    &lt;p&gt;Scroll to the top to remove the effect.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +49,23 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #header {
+    background-color: #f1f1f1;
+    padding: 50px 10px;
+    color: black;
+    text-align: center;
+    font-size: 90px; 
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +78,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  // When the user scrolls down 50px from the top of the document, resize the header's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("header").style.fontSize = "30px";
+    } else {
+      document.getElementById("header").style.fontSize = "90px";
+    }
+  }
 </code>
       </pre>
     </div>

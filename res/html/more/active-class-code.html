@@ -29,7 +29,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;Active Button&lt;/h1&gt;
+  &lt;p&gt;Highlight the active/current (pressed) button.&lt;/p&gt;
+    
+  &lt;div id="myDIV"&gt;
+    &lt;button class="btn"&gt;1&lt;/button&gt;
+    &lt;button class="btn active"&gt;2&lt;/button&gt;
+    &lt;button class="btn"&gt;3&lt;/button&gt;
+    &lt;button class="btn"&gt;4&lt;/button&gt;
+    &lt;button class="btn"&gt;5&lt;/button&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +51,21 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Style the active class, and buttons on mouse-over */
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +78,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i &lt; btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
 </code>
       </pre>
     </div>

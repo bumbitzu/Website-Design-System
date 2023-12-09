@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+#myDIV {
+  height: 250px;
+  width: 250px;
+  overflow: auto;
+  background: coral;
+}
 
-  <head>
+#content {
+  margin:500px;
+  height: 800px;
+  width: 2000px;
+  background-color: coral;
+}
+</style>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<body>
+<h1>The Element Object</h1>
+<h2>The scrollIntoView() Method</h2>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<button onclick="myFunction()">Scroll</button>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<p>Click "Scroll" to scroll to the top of the element with id="content".</p>
 
-    </script>
-  </body>
 
+<div id="myDIV">
+  <div id="content">
+  <p>Some text inside an element.</p>
+  <p>Some text inside an element.</p>
+  <p>Some text inside an element.</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("content");
+  element.scrollIntoView();
+}
+</script>
+
+</body>
 </html>

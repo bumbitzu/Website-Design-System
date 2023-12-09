@@ -29,25 +29,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;p&gt;Click the button to swap the text of the DIV element:&lt;/p&gt;
+
+  &lt;p&gt;&lt;button onclick="myFunction()"&gt;Click Me&lt;/button&gt;&lt;/p&gt;
+  
+  &lt;div id="myDIV"&gt;Hello&lt;/div&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +46,14 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.innerHTML === "Hello") {
+      x.innerHTML = "Swapped text!";
+    } else {
+      x.innerHTML = "Hello";
+    }
+  }
 </code>
       </pre>
     </div>

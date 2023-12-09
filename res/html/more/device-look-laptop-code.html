@@ -29,7 +29,11 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+&lt;div class="laptop"&gt;
+  &lt;div class="content"&gt;
+    &lt;iframe src="../../../index.html" style="width:100%;border:none;height:100%" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +46,69 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    background: #f1f1f1;
+  }
+  
+  /* The laptop with borders */
+  .laptop {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+    transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+    left: 50%;
+    position: absolute;
+    width: 1366px;
+    height: 800px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: black;
+    border-width: 24px 24px 80px;
+  
+  
+  }
+  
+  /* The keyboard of the laptop */
+  .laptop:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1600px;
+    height: 60px;
+    margin: 80px 0 0 -110px;
+    background: rgb(90, 90, 90);
+    border-radius: 6px;
+  }
+  
+  /* The top of the keyboard */
+  .laptop:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    bottom: -110px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    background: #f1f1f1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* The screen (or content) of the device */
+  .laptop .content {
+    width: 1366px;
+    height: 800px;
+    overflow: hidden;
+    border: none;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

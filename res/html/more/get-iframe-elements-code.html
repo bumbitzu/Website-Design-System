@@ -29,25 +29,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;iframe id="myFrame" src="../../../index.html" style="height:380px;width:100%"&gt;&lt;/iframe&gt;
+
+  &lt;p&gt;Click the "Tryit" button to hide the first H1 element in the iframe (another document).&lt;/p&gt;
+  
+  &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +46,11 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    var iframe = document.getElementById("myFrame");
+    var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
+    elmnt.style.display = "none";
+  }
 </code>
       </pre>
     </div>

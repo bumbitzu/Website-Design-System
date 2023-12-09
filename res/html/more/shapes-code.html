@@ -29,7 +29,35 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Square CSS&lt;/h2&gt;
+  &lt;div class="square"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Circle CSS&lt;/h2&gt;
+  &lt;div class="circle"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Oval CSS&lt;/h2&gt;
+  &lt;div class="oval"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Trapezoid CSS&lt;/h2&gt;
+  &lt;div class="trapezoid "&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Rectangle CSS&lt;/h2&gt;
+  &lt;div class="rectangle"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Parallelogram CSS&lt;/h2&gt;
+  &lt;div class="parallelogram"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Triangle Up CSS&lt;/h2&gt;
+  &lt;div class="triangle-up"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Triangle Down CSS&lt;/h2&gt;
+  &lt;div class="triangle-down"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Triangle Left CSS&lt;/h2&gt;
+  &lt;div class="triangle-left"&gt;&lt;/div&gt;
+  
+  &lt;h2&gt;Triangle Right CSS&lt;/h2&gt;
+  &lt;div class="triangle-right"&gt;&lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +70,76 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .square {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+  }
+  .circle {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+  
+  .oval {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+  .trapezoid {
+    border-bottom: 50px solid #555;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 125px;
+  }
+  .rectangle {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+  }
+  .parallelogram {
+    width: 100px;
+    height: 50px;
+    transform: skew(20deg);
+    background: #555;
+  }
+  .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #555;
+  }
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #555;
+  }
+  
+  .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid #555;
+    border-bottom: 25px solid transparent;
+  }
+  .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #555;
+    border-bottom: 25px solid transparent;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

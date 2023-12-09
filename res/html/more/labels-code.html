@@ -29,7 +29,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;Labels&lt;/h1&gt;
+
+  &lt;span class="label success"&gt;Success&lt;/span&gt;
+  &lt;span class="label info"&gt;Info&lt;/span&gt;
+  &lt;span class="label warning"&gt;Warning&lt;/span&gt;
+  &lt;span class="label danger"&gt;Danger&lt;/span&gt;
+  &lt;span class="label other"&gt;Other&lt;/span&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +48,21 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .label {
+    color: white;
+    padding: 8px;
+    font-family: Arial;
+  }
+  .success {background-color: #04AA6D;} /* Green */
+  .info {background-color: #2196F3;} /* Blue */
+  .warning {background-color: #ff9800;} /* Orange */
+  .danger {background-color: #f44336;} /* Red */ 
+  .other {background-color: #e7e7e7; color: black;} /* Gray */ 
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

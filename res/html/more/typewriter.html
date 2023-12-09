@@ -1,39 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body>
 
-  <head>
+<h1>Typewriter</h1>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<button onclick="typeWriter()">Click me</button>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<p id="demo"></p>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<script>
+var i = 0;
+var txt = 'Lorem ipsum dummy text blabla.';
+var speed = 50;
 
-    </script>
-  </body>
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 
+</body>
 </html>

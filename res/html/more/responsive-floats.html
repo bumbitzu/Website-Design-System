@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.float-right-sm {
+  background-color: yellow;
+}
 
-  <head>
+.float-right-lg {
+  background-color: pink;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+@media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+  }
+}
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+  }
+}
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+</style>
+</head>
+<body>
 
-    </script>
-  </body>
+<h2>Responsive Floats</h2>
+<p>The float-right-sm class will float right on screens that are equal to or LESS THAN 768px. The float-right-lg will float right on screens that are equal to or GREATER THAN 769px. Note that we also use a clearfix to clear floats.</p>
+<p>Resize the browser window to see the result.</p>
 
+<div class="clearfix">
+  <span class="float-right-sm">Float right =&lt;768px</span><br>
+  <span class="float-right-lg">Float right =&gt;769px</span><br>
+</div>
+
+</body>
 </html>

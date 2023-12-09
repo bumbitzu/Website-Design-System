@@ -29,25 +29,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;JavaScript Math.random()&lt;/h2&gt;
+
+  &lt;p&gt;Every time you click the button, getRndInteger(min, max) returns a random number between 0 
+  and 9 (both included):&lt;/p&gt;
+  
+  &lt;button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)"&gt;Click Me&lt;/button&gt;
+  
+  &lt;p id="demo"&gt;&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +49,11 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  
+  const rndInt = randomIntFromInterval(1, 6)
 </code>
       </pre>
     </div>

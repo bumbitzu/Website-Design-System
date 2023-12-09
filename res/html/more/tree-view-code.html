@@ -29,7 +29,32 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Tree View&lt;/h2&gt;
+  &lt;p&gt;A tree view represents a hierarchical view of information, where each item can have a number of subitems.&lt;/p&gt;
+  &lt;p&gt;Click on the arrow(s) to open or close the tree branches.&lt;/p&gt;
+  
+  &lt;ul id="myUL"&gt;
+    &lt;li&gt;&lt;span class="caret"&gt;Beverages&lt;/span&gt;
+      &lt;ul class="nested"&gt;
+        &lt;li&gt;Water&lt;/li&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;&lt;span class="caret"&gt;Tea&lt;/span&gt;
+          &lt;ul class="nested"&gt;
+            &lt;li&gt;Black Tea&lt;/li&gt;
+            &lt;li&gt;White Tea&lt;/li&gt;
+            &lt;li&gt;&lt;span class="caret"&gt;Green Tea&lt;/span&gt;
+              &lt;ul class="nested"&gt;
+                &lt;li&gt;Sencha&lt;/li&gt;
+                &lt;li&gt;Gyokuro&lt;/li&gt;
+                &lt;li&gt;Matcha&lt;/li&gt;
+                &lt;li&gt;Pi Lo Chun&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;  
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +67,43 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  ul, #myUL {
+    list-style-type: none;
+  }
+  
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +116,15 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+  
+  for (i = 0; i &lt; toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
 </code>
       </pre>
     </div>

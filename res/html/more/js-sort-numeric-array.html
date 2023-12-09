@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body>
+<h1>How To Sort an Array Numerically</h1>
 
-  <head>
+<p>Sort the array in ascending order:</p>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<p id="demo1"></p>
+<p id="demo2"></p>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<p>Sort the array in descending order:</p>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<p id="demo3"></p>
+<p id="demo4"></p>
 
-    </script>
-  </body>
+<script>
+const points1 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points1;  
 
+points1.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points1;
+
+const points2 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo3").innerHTML = points2;  
+
+points2.sort(function(a, b){return b - a});
+document.getElementById("demo4").innerHTML = points2;
+</script>
+
+</body>
 </html>

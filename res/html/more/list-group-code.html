@@ -29,7 +29,18 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;List Group&lt;/h2&gt;
+  &lt;p&gt;Transform a basic list into a list group:&lt;/p&gt;
+  
+  &lt;ul&gt;
+    &lt;li&gt;Adele&lt;/li&gt;
+    &lt;li&gt;Agnes&lt;/li&gt;
+    &lt;li&gt;Billy&lt;/li&gt;
+    &lt;li&gt;Bob&lt;/li&gt;
+    &lt;li&gt;Calvin&lt;/li&gt;
+    &lt;li&gt;Christina&lt;/li&gt;
+    &lt;li&gt;Cindy&lt;/li&gt;
+  &lt;/ul&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +53,27 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  * {
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

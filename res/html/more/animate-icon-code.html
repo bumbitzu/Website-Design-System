@@ -29,7 +29,11 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;!--Import library in within head--&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+  &lt;div id="div1" class="fa"&gt;&lt;/div&gt;
+  &lt;p&gt;This example demonstrates how to use an icon library to make an animated effect.&lt;/p&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +46,9 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  #div1 {
+    font-size:48px;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +61,25 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function chargebattery() {
+    var a;
+    a = document.getElementById("div1");
+    a.innerHTML = "&#xf244;";
+    setTimeout(function () {
+        a.innerHTML = "&#xf243;";
+      }, 1000);
+    setTimeout(function () {
+        a.innerHTML = "&#xf242;";
+      }, 2000);
+    setTimeout(function () {
+        a.innerHTML = "&#xf241;";
+      }, 3000);
+    setTimeout(function () {
+        a.innerHTML = "&#xf240;";
+      }, 4000);
+  }
+  chargebattery();
+  setInterval(chargebattery, 5000);
 </code>
       </pre>
     </div>

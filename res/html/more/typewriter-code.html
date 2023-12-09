@@ -29,25 +29,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;Typewriter&lt;/h1&gt;
+
+  &lt;button onclick="typeWriter()"&gt;Click me&lt;/button&gt;
+  
+  &lt;p id="demo"&gt;&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +46,17 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var i = 0;
+  var txt = 'Lorem ipsum dummy text blabla.';
+  var speed = 50;
+  
+  function typeWriter() {
+    if (i &lt; txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
 </code>
       </pre>
     </div>

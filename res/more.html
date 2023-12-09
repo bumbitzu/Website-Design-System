@@ -38,7 +38,7 @@
     </style>
   </head>
 
-  <body onload="init('./html/more/fullscreen-video.html','filter-list');">
+  <body onload="init('./html/more/fullscreen-video.html','fullscreen-video');">
     <!-- Navbar -->
     <div class="nav-bar" id="nav-bar">
       <div class="nav-content">
@@ -62,7 +62,6 @@
       <h4 class="bar-item"><b>More</b></h4>
       <a class="side-button" href="#" id="fullscreen-video"onclick="changeColor('fullscreen-video'); changeIframe('./html/more/fullscreen-video.html')">Fullscreen Video</a>
       <a class="side-button" href="#" id="modal-boxes"onclick="changeColor('modal-boxes'); changeIframe('./html/more/modal-boxes.html')">Modal Boxes</a>
-      <a class="side-button" href="#" id="delete-modal"onclick="changeColor('delete-modal'); changeIframe('./html/more/delete-modal.html')">Delete Modal</a>
       <a class="side-button" href="#" id="timeline"onclick="changeColor('timeline'); changeIframe('./html/more/timeline.html')">Timeline</a>
       <a class="side-button" href="#" id="scroll-indicator"onclick="changeColor('scroll-indicator'); changeIframe('./html/more/scroll-indicator.html')">Scroll Indicator</a>
       <a class="side-button" href="#" id="progress-bar"onclick="changeColor('progress-bar'); changeIframe('./html/more/progress-bar.html')">Progress Bar</a>
@@ -75,7 +74,6 @@
       <a class="side-button" href="#" id="popup"onclick="changeColor('popup'); changeIframe('./html/more/popup.html')">Popup</a>
       <a class="side-button" href="#" id="collapsible"onclick="changeColor('collapsible'); changeIframe('./html/more/collapsible.html')">Collapsible</a>
       <a class="side-button" href="#" id="calendar"onclick="changeColor('calendar'); changeIframe('./html/more/calendar.html')">Calendar</a>
-      <a class="side-button" href="#" id="html-includes"onclick="changeColor('html-includes'); changeIframe('./html/more/html-includes.html')">Html Includes</a>
       <a class="side-button" href="#" id="to-do-list"onclick="changeColor('to-do-list'); changeIframe('./html/more/to-do-list.html')">To Do List</a>
       <a class="side-button" href="#" id="loaders"onclick="changeColor('loaders'); changeIframe('./html/more/loaders.html')">Loaders</a>
       <a class="side-button" href="#" id="badges"onclick="changeColor('badges'); changeIframe('./html/more/badges.html')">Badges</a>
@@ -94,11 +92,10 @@
       <a class="side-button" href="#" id="ribbon"onclick="changeColor('ribbon'); changeIframe('./html/more/ribbon.html')">Ribbon</a>
       <a class="side-button" href="#" id="tag-cloud"onclick="changeColor('tag-cloud'); changeIframe('./html/more/tag-cloud.html')">Tag Cloud</a>
       <a class="side-button" href="#" id="circles"onclick="changeColor('circles'); changeIframe('./html/more/circles.html')">Circles</a>
-      <a class="side-button" href="#" id="styke-hr"onclick="changeColor('styke-hr'); changeIframe('./html/more/styke-hr.html')">Styke Hr</a>
+      <a class="side-button" href="#" id="styke-hr"onclick="changeColor('styke-hr'); changeIframe('./html/more/styke-hr.html')">Style HR</a>
       <a class="side-button" href="#" id="coupon"onclick="changeColor('coupon'); changeIframe('./html/more/coupon.html')">Coupon</a>
       <a class="side-button" href="#" id="list-group"onclick="changeColor('list-group'); changeIframe('./html/more/list-group.html')">List Group</a>
       <a class="side-button" href="#" id="list-group-with-badges"onclick="changeColor('list-group-with-badges'); changeIframe('./html/more/list-group-with-badges.html')">List Group With Badges</a>
-      <a class="side-button" href="#" id="list-without-bullets"onclick="changeColor('list-without-bullets'); changeIframe('./html/more/list-without-bullets.html')">List Without Bullets</a>
       <a class="side-button" href="#" id="responsive-text"onclick="changeColor('responsive-text'); changeIframe('./html/more/responsive-text.html')">Responsive Text</a>
       <a class="side-button" href="#" id="cutout-text"onclick="changeColor('cutout-text'); changeIframe('./html/more/cutout-text.html')">Cutout Text</a>
       <a class="side-button" href="#" id="glowing-text"onclick="changeColor('glowing-text'); changeIframe('./html/more/glowing-text.html')">Glowing Text</a>
@@ -137,7 +134,7 @@
       <a class="side-button" href="#" id="zoom-hover"onclick="changeColor('zoom-hover'); changeIframe('./html/more/zoom-hover.html')">Zoom Hover</a>
       <a class="side-button" href="#" id="flip-box"onclick="changeColor('flip-box'); changeIframe('./html/more/flip-box.html')">Flip Box</a>
       <a class="side-button" href="#" id="center-vericaly"onclick="changeColor('center-vericaly'); changeIframe('./html/more/center-vericaly.html')">Center Vericaly</a>
-      <a class="side-button" href="#" id="venter-button-on-div"onclick="changeColor('venter-button-on-div'); changeIframe('./html/more/venter-button-on-div.html')">Venter Button On Div</a>
+      <a class="side-button" href="#" id="venter-button-on-div"onclick="changeColor('venter-button-on-div'); changeIframe('./html/more/venter-button-on-div.html')">Center Button On Div</a>
       <a class="side-button" href="#" id="center-a-list"onclick="changeColor('center-a-list'); changeIframe('./html/more/center-a-list.html')">Center A List</a>
       <a class="side-button" href="#" id="transition-on-hover"onclick="changeColor('transition-on-hover'); changeIframe('./html/more/transition-on-hover.html')">Transition On Hover</a>
       <a class="side-button" href="#" id="arrows"onclick="changeColor('arrows'); changeIframe('./html/more/arrows.html')">Arrows</a>
@@ -146,9 +143,10 @@
       <a class="side-button" href="#" id="full-height-element"onclick="changeColor('full-height-element'); changeIframe('./html/more/full-height-element.html')">Full Height Element</a>
       <a class="side-button" href="#" id="browser-window"onclick="changeColor('browser-window'); changeIframe('./html/more/browser-window.html')">Browser Window</a>
       <a class="side-button" href="#" id="custom-scrollbar"onclick="changeColor('custom-scrollbar'); changeIframe('./html/more/custom-scrollbar.html')">Custom Scrollbar</a>
-      <a class="side-button" href="#" id="hide-scrollbar"onclick="changeColor('hide-scrollbar'); changeIframe('./html/more/hide-scrollbar.html')">Hide Scrollbar</a>
       <a class="side-button" href="#" id="show-force-scrollbar"onclick="changeColor('show-force-scrollbar'); changeIframe('./html/more/show-force-scrollbar.html')">Show Force Scrollbar</a>
-      <a class="side-button" href="#" id="device-look"onclick="changeColor('device-look'); changeIframe('./html/more/device-look.html')">Device Look</a>
+      <a class="side-button" href="#" id="device-look-smartphone"onclick="changeColor('device-look-smartphone'); changeIframe('./html/more/device-look-smartphone.html')">Device Look ( SmartPhone )</a>
+      <a class="side-button" href="#" id="device-look-tablet"onclick="changeColor('device-look-tablet'); changeIframe('./html/more/device-look-tablet.html')">Device Look ( Tablet )</a>
+      <a class="side-button" href="#" id="device-look-laptop"onclick="changeColor('device-look-laptop'); changeIframe('./html/more/device-look-laptop.html')">Device Look ( Laptop )</a>
       <a class="side-button" href="#" id="contenteditable-border"onclick="changeColor('contenteditable-border'); changeIframe('./html/more/contenteditable-border.html')">Contenteditable Border</a>
       <a class="side-button" href="#" id="placeholder-color"onclick="changeColor('placeholder-color'); changeIframe('./html/more/placeholder-color.html')">Placeholder Color</a>
       <a class="side-button" href="#" id="disable-resizing-textarea"onclick="changeColor('disable-resizing-textarea'); changeIframe('./html/more/disable-resizing-textarea.html')">Disable Resizing Textarea</a>
@@ -191,11 +189,13 @@
     <main>
 
       <section id="section1">
+        <a id="newTab" href="" onclick="openInFullTab()" target="_blank">
         <div class="new-tab-button">
-          <a id="newTab" href="" onclick="openInFullTab()" target="_blank"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Full Preview</a>
+          <i class="fa fa-arrows-alt" aria-hidden="true"></i> Full Preview
         </div>
+      </a>
         <div class="section-container" id="section-container">
-          <iframe id="iframe1" src="" style="width: 100%;" frameborder="0"></iframe>
+          <iframe id="iframe1" src="" style="width: 100%; max-height: 700px;" frameborder="0"></iframe>
         </div>
       </section>
       <section id="section2">

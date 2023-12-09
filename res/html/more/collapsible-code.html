@@ -29,7 +29,27 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Collapsibles&lt;/h2&gt;
+
+  &lt;p&gt;A Collapsible:&lt;/p&gt;
+  &lt;button type="button" class="collapsible"&gt;Open Collapsible&lt;/button&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;p&gt;Collapsible Set:&lt;/p&gt;
+  &lt;button type="button" class="collapsible"&gt;Open Section 1&lt;/button&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button type="button" class="collapsible"&gt;Open Section 2&lt;/button&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button type="button" class="collapsible"&gt;Open Section 3&lt;/button&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +62,28 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +96,20 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i &lt; coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
 </code>
       </pre>
     </div>

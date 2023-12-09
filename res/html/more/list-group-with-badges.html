@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <head>
+ul.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+ul.list-group li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+}
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+ul.list-group .badge {
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-align: center;
+  margin-left: 5px;
+}
+</style>
+</head>
+<body>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<h2>List Group with Badges</h2>
+<p>Add badges to a list group:</p>
 
-    </script>
-  </body>
+<ul class="list-group">
+  <li>Inbox <span class="badge">2</span></li>
+  <li>Other <span class="badge">5</span></li>
+  <li>Saved</li>
+  <li>Stuff</li>
+  <li>Old</li>
+</ul>
 
+</body>
 </html>

@@ -29,7 +29,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Different type of Dividers&lt;/h2&gt;
+
+  &lt;p&gt;Dashed&lt;/p&gt;
+  &lt;hr class="dashed"&gt;
+  
+  &lt;p&gt;Dotted&lt;/p&gt;
+  &lt;hr class="dotted"&gt;
+  
+  &lt;p&gt;Solid&lt;/p&gt;
+  &lt;hr class="solid"&gt;
+  
+  &lt;p&gt;Rounded&lt;/p&gt;
+  &lt;hr class="rounded"&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +54,35 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Dashed border */
+  hr.dashed {
+    border-top: 3px dashed #bbb;
+  }
+  
+  /* Dotted border */
+  hr.dotted {
+    border-top: 3px dotted #bbb;
+  }
+  
+  /* Solid border */
+  hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  
+  /* Rounded border */
+  hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

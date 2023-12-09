@@ -29,7 +29,20 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Responsive Testimonials&lt;/h2&gt;
+  &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;img src="../../img/img_avatar3.png" alt="Avatar" style="width:90px"&gt;
+    &lt;p&gt;&lt;span&gt;Chris Fox.&lt;/span&gt; CEO at Mighty Schools.&lt;/p&gt;
+    &lt;p&gt;John Doe saved us from a web disaster.&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;img src="../../img/img_avatar2.png" alt="Avatar" style="width:90px"&gt;
+    &lt;p&gt;&lt;span&gt;Rebecca Flex.&lt;/span&gt; CEO at Company.&lt;/p&gt;
+    &lt;p&gt;No one is better than John Doe.&lt;/p&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +55,46 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+  }
+  
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

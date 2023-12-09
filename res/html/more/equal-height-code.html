@@ -29,7 +29,29 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Equal Height Columns&lt;/h2&gt;
+  &lt;p&gt;Make the columns match the height of the tallest column.&lt;/p&gt;
+  
+  &lt;div class="col-container"&gt;
+    &lt;div class="col" style="background:orange"&gt;
+      &lt;h2&gt;Column 1&lt;/h2&gt;
+      &lt;p&gt;Hello World&lt;/p&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="col" style="background:yellow"&gt;
+      &lt;h2&gt;Column 2&lt;/h2&gt;
+      &lt;p&gt;Hello World!&lt;/p&gt;
+      &lt;p&gt;Hello World!&lt;/p&gt;
+      &lt;p&gt;Hello World!&lt;/p&gt;
+      &lt;p&gt;Hello World!&lt;/p&gt;
+    &lt;/div&gt;
+  
+    &lt;div class="col" style="background:orange"&gt;
+      &lt;h2&gt;Column 3&lt;/h2&gt;
+      &lt;p&gt;Some other text..&lt;/p&gt;
+      &lt;p&gt;Some other text..&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +64,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  .col-container {
+    display: table;
+    width: 100%;
+  }
+  .col {
+    display: table-cell;
+    padding: 16px;
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="

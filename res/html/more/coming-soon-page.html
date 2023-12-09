@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-  <head>
+.bgimg {
+  background-image: url('../../img/aerial_view_of_rainbow.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
 
-    </script>
-  </body>
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
 
+<div class="bgimg">
+  <div class="topleft">
+    <p>Logo</p>
+  </div>
+  <div class="middle">
+    <h1>JESUS IS COMING SOON</h1>
+    <hr>
+    <p>Pprepare yourself to meet God</p>
+  </div>
+  <div class="bottomleft">
+    <p>Matthew 16:28</p>
+  </div>
+</div>
+
+</body>
 </html>

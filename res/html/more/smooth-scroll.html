@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<style>
+html {
+  scroll-behavior: smooth;
+}
 
-  <head>
+#section1 {
+  height: 600px;
+  background-color: pink;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+#section2 {
+  height: 600px;
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<h1>Smooth Scroll</h1>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
+<div class="main" id="section1">
+  <h2>Section 1</h2>
+  <p>Click on the link to see the "smooth" scrolling effect.</p>
+  <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+  <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+</div>
 
-    </script>
-  </body>
+<div class="main" id="section2">
+  <h2>Section 2</h2>
+  <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+</div>
 
+</body>
 </html>

@@ -29,25 +29,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+&lt;p&gt;If the viewport is less than, or equal to, 700 pixels wide, the background color will be yellow. If it is greater than 700, it will change to pink.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resize the browser window to see the effect.&lt;/strong&gt;&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +43,24 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      document.body.style.backgroundColor = "yellow";
+    } else {
+     document.body.style.backgroundColor = "pink";
+    }
+  }
+  
+  // Create a MediaQueryList object
+  var x = window.matchMedia("(max-width: 700px)")
+  
+  // Call listener function at run time
+  myFunction(x);
+  
+  // Attach listener function on state changes
+  x.addEventListener("change", function() {
+    myFunction(x);
+  });
 </code>
       </pre>
     </div>

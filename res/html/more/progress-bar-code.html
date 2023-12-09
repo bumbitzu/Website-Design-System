@@ -29,7 +29,14 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;JavaScript Progress Bar&lt;/h1&gt;
+
+  &lt;div id="myProgress"&gt;
+    &lt;div id="myBar"&gt;10%&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;br&gt;
+  &lt;button onclick="move()"&gt;Click Me&lt;/button&gt; 
 </code>
       </pre>
     </div>
@@ -42,7 +49,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  #myProgress {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +74,25 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var i = 0;
+  function move() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 10;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width  + "%";
+        }
+      }
+    }
+  }
 </code>
       </pre>
     </div>

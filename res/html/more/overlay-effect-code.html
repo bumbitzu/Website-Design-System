@@ -29,7 +29,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;div id="overlay" onclick="off()"&gt;&lt;/div&gt;
+
+  &lt;div style="padding:20px"&gt;
+    &lt;h2&gt;Overlay&lt;/h2&gt;
+    &lt;p&gt;Add an overlay effect to the page content (100% width and height with a black background color with 50% opacity).&lt;/p&gt;
+    &lt;button onclick="on()"&gt;Turn on overlay effect&lt;/button&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,7 +48,19 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
 </code>
       </pre>
     </div>
@@ -55,7 +73,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
 </code>
       </pre>
     </div>
