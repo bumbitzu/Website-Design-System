@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,33 +29,35 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;p&gt;Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.&lt;/p&gt;
+
+  &lt;input type="text" value="Hello World" id="myInput"&gt;
+  &lt;button onclick="myFunction()"&gt;Copy text&lt;/button&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
-
   <!--JS-------------------------------->
   <div class="code">
     <h3>JS</h3>
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput");
+  
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+    
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  }
 </code>
       </pre>
     </div>
