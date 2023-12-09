@@ -29,7 +29,70 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h2&gt;Responsive Table&lt;/h2&gt;
+  &lt;p&gt;If you have a table that is too wide, you can add a container element with overflow-x:auto around the table, and it will display a horizontal scroll bar when needed.&lt;/p&gt;
+  &lt;p&gt;Resize the browser window to see the effect. Try to remove the div element and see what happens to the table.&lt;/p&gt;
+  
+  &lt;div style="overflow-x:auto;"&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;First Name&lt;/th&gt;
+        &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+        &lt;th&gt;Points&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Jill&lt;/td&gt;
+        &lt;td&gt;Smith&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Eve&lt;/td&gt;
+        &lt;td&gt;Jackson&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Adam&lt;/td&gt;
+        &lt;td&gt;Johnson&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+        &lt;td&gt;67&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +105,24 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
