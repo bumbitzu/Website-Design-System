@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,7 +29,23 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h1&gt;Custom Checkboxes&lt;/h1&gt;
+  &lt;label class="container"&gt;One
+    &lt;input type="checkbox" checked="checked"&gt;
+    &lt;span class="checkmark"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class="container"&gt;Two
+    &lt;input type="checkbox"&gt;
+    &lt;span class="checkmark"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class="container"&gt;Three
+    &lt;input type="checkbox"&gt;
+    &lt;span class="checkmark"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class="container"&gt;Four
+    &lt;input type="checkbox"&gt;
+    &lt;span class="checkmark"&gt;&lt;/span&gt;
+  &lt;/label&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +58,78 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
