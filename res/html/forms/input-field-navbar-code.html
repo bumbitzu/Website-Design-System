@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,7 +29,23 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;div class="topnav"&gt;
+  &lt;a class="active" href="#home"&gt;Home&lt;/a&gt;
+  &lt;a href="#about"&gt;About&lt;/a&gt;
+  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;div class="search-container"&gt;
+    &lt;form action="/action_page.php"&gt;
+      &lt;input type="text" placeholder="Search.." name="search"&gt;
+      &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style="padding-left:16px"&gt;
+  &lt;h2&gt;Responsive Input Field in Navbar&lt;/h2&gt;
+  &lt;p&gt;Navigation bar with a search box and a submit button inside of it.&lt;/p&gt;
+  &lt;p&gt;Resize the browser window to see the responsive effect.&lt;/p&gt;
+&lt;/div&gt;
 </code>
       </pre>
     </div>
@@ -42,25 +58,85 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-css">
-<!--CSS-->
+  * {box-sizing: border-box;}
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
 </code>
       </pre>
     </div>
   </div>
   <!--CSS------------------------------->
-
-  <!--JS-------------------------------->
-  <div class="code">
-    <h3>JS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-javascript">
-<!--JS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--JS-------------------------------->
   <div style="height:50px;"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
 integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
