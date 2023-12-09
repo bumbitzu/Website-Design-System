@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<body style="height: 300px; overflow: hidden;">
 
-  <head>
+<h3>Trigger Button Click on Enter</h3>
+<p>Press the "Enter" key inside the input field to trigger the button.</p>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Roboto", sans-serif;
-      }
+<input id="myInput" value="Some text..">
+<button id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
 
-      body {
-        margin: 0;
-        padding: 1px;
-        height: 400px;
-      }
-    </style>
-  </head>
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+</script>
 
-  <body>
-    <!--CONTENT-->
-    <!--CONTENT-->
-    <script>
-
-    </script>
-  </body>
-
+</body>
 </html>

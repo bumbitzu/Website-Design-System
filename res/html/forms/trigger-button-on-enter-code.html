@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,25 +29,16 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;h3&gt;Trigger Button Click on Enter&lt;/h3&gt;
+  &lt;p&gt;Press the "Enter" key inside the input field to trigger the button.&lt;/p&gt;
+  
+  &lt;input id="myInput" value="Some text.."&gt;
+  &lt;button id="myBtn" onclick="javascript:alert('Hello World!')"&gt;Button&lt;/button&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
 
   <!--JS-------------------------------->
   <div class="code">
@@ -55,7 +46,13 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  var input = document.getElementById("myInput");
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("myBtn").click();
+    }
+  });
 </code>
       </pre>
     </div>
