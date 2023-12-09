@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   
   <meta charset="UTF-8">
@@ -29,33 +29,32 @@
     <div class="code-wrapper">
       <pre>
 <code class="language-html">
-<!--HTML-->
+  &lt;p&gt;Display some text when the checkbox is checked:&lt;/p&gt;
+
+  &lt;label for="myCheck"&gt;Checkbox:&lt;/label&gt; 
+  &lt;input type="checkbox" id="myCheck" onclick="myFunction()"&gt;
+  
+  &lt;p id="text" style="display:none"&gt;Checkbox is CHECKED!&lt;/p&gt;
 </code>
       </pre>
     </div>
   </div>
   <!--HTML------------------------------>
-
-  <!--CSS------------------------------->
-  <div class="code">
-    <h3>CSS</h3>
-    <div class="code-wrapper">
-      <pre>
-<code class="language-css">
-<!--CSS-->
-</code>
-      </pre>
-    </div>
-  </div>
-  <!--CSS------------------------------->
-
   <!--JS-------------------------------->
   <div class="code">
     <h3>JS</h3>
     <div class="code-wrapper">
       <pre>
 <code class="language-javascript">
-<!--JS-->
+  function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+  }
 </code>
       </pre>
     </div>
