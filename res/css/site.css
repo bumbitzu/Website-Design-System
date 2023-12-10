@@ -206,6 +206,28 @@ footer{
 .new-tab-button:hover{
   background-color: #5a5a5a;
 }
+.table-all{
+  
+  font-size: 20px;
+}
+.table-all tr:nth-child(even)
+{
+  background-color: rgba(34, 34, 34, 0.1);
+}
+.table-all tr.group-c{
+  background-color: rgba(255, 255, 255, 0);
+}
+.fa-paypal{
+  color: rgb(0, 0, 167); 
+}
+#donate{
+  float: right;
+
+}
+#donate:hover{
+  background-color: #ffffff;
+  color: black;
+}
 /*==========================*/
 @media (max-width: 993px){
   .side-bar{
@@ -213,6 +235,9 @@ footer{
   }
   main{
     margin-left: 0;
+  }
+  #donate{
+    float: none;
   }
   .nav-button{
     float: none;
