@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html>
-<style>
-#text {display:none;color:red}
-</style>
-<body style="height: 300px; overflow: hidden;">
 
-<h3>Detect Caps Lock</h3>
-<p>Press the "Caps Lock" key inside the input field to trigger the function.</p>
+  <head>
+    <title>Preview</title>
+    <style>
+      #text {
+        display: none;
+        color: red
+      }
+    </style>
+  </head>
 
-<input id="myInput" value="Some text..">
-<p id="text">WARNING! Caps lock is ON.</p>
+  <body style="height: 300px; overflow: hidden;">
 
-<script>
-var input = document.getElementById("myInput");
-var text = document.getElementById("text");
-input.addEventListener("keyup", function(event) {
+    <h3>Detect Caps Lock</h3>
+    <p>Press the "Caps Lock" key inside the input field to trigger the function.</p>
 
-if (event.getModifierState("CapsLock")) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none"
-  }
-});
-</script>
+    <input id="myInput" value="Some text..">
+    <p id="text">WARNING! Caps lock is ON.</p>
 
-</body>
+    <script>
+      var input = document.getElementById("myInput");
+      var text = document.getElementById("text");
+      input.addEventListener("keyup", function (event)
+      {
+
+        if (event.getModifierState("CapsLock"))
+        {
+          text.style.display = "block";
+        } else
+        {
+          text.style.display = "none"
+        }
+      });
+    </script>
+
+  </body>
+
 </html>

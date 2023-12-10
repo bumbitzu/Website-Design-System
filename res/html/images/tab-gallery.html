@@ -1,108 +1,114 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
+  <head>
+    <title>Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
 
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
+      /* The grid: Four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+      }
 
-.column img:hover {
-  opacity: 1;
-}
+      /* Style the images inside the grid */
+      .column img {
+        opacity: 0.8;
+        cursor: pointer;
+      }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      .column img:hover {
+        opacity: 1;
+      }
 
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
+      /* The expanding image container */
+      .container {
+        position: relative;
+        display: none;
+      }
 
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-.row img{
-  height: 120px;
-}
-</style>
-</head>
-<body style="height: 800px;" >
+      /* Expanding image text */
+      #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+      }
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
+      /* Closable button inside the expanded image */
+      .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="../../img/at-the-beach.jpeg" alt="Caption" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="../../img/amazing_sunset.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="../../img/amazing.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="../../img/alps_meadow_germany.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div>
+      .row img {
+        height: 120px;
+      }
+    </style>
+  </head>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
-</div>
+  <body style="height: 800px;">
 
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
+    <div style="text-align:center">
+      <h2>Tabbed Image Gallery</h2>
+      <p>Click on the images below:</p>
+    </div>
 
-</body>
+    <!-- The four columns -->
+    <div class="row">
+      <div class="column">
+        <img src="../../img/at-the-beach.jpeg" alt="Caption" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="../../img/amazing_sunset.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="../../img/amazing.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="../../img/alps_meadow_germany.jpg" alt="Caption" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+
+    <script>
+      function myFunction(imgs)
+      {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+    </script>
+
+  </body>
+
 </html>

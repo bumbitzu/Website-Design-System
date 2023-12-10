@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-<body style="height: 300px;">
 
-<p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.</p>
+  <head>
+    <title>Preview</title>
+  </head>
 
-<input type="text" value="Hello World" id="myInput">
-<button onclick="myFunction()">Copy text</button>
+  <body style="height: 300px;">
 
-<script>
-function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
+    <p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a
+      different window, to see the effect.</p>
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
+    <input type="text" value="Hello World" id="myInput">
+    <button onclick="myFunction()">Copy text</button>
 
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-  
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
-</script>
+    <script>
+      function myFunction()
+      {
+        // Get the text field
+        var copyText = document.getElementById("myInput");
 
-</body>
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+
+        // Alert the copied text
+        alert("Copied the text: " + copyText.value);
+      }
+    </script>
+
+  </body>
+
 </html>
